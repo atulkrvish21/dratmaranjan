@@ -1,0 +1,23 @@
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+    <app-hero  [doctor]="content.doctor" />
+    <app-about-doctor appScrollReveal appScrollRevealDirection="left"  [appScrollRevealDelay]="80" [doctor]="content.doctor" />
+    <app-services appScrollReveal appScrollRevealDirection="right"  [appScrollRevealDelay]="80" [services]="content.services" />
+    <app-conditions appScrollReveal appScrollRevealDirection="left"  [appScrollRevealDelay]="80" [conditions]="content.conditions" />
+    <app-why-choose-us appScrollReveal appScrollRevealDirection="right"  [appScrollRevealDelay]="80" [stats]="content.stats" [trust]="content.trust" />
+    <app-testimonials appScrollReveal appScrollRevealDirection="left" [appScrollRevealDelay]="80" [testimonials]="content.testimonials" />
+    <app-faq appScrollReveal appScrollRevealDirection="right"  [appScrollRevealDelay]="80" [faqs]="content.faqs" />
+    <app-appointment appScrollReveal appScrollRevealDirection="left"  [appScrollRevealDelay]="80" [doctor]="content.doctor" />
+  </main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <a
+    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-lift transition hover:-translate-y-1"
+    [href]="'https://wa.me/' + content.doctor.whatsapp + '?text=Hello%20Doctor%2C%20I%20want%20to%20book%20an%20appointment%20for%20consultation'"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    WA
+  </a>
+}

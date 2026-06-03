@@ -1,0 +1,40 @@
+.hero-pattern {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(45, 148, 218, 0.18), transparent 28%),
+    radial-gradient(circle at 95% 20%, rgba(86, 180, 243, 0.26), transparent 24%),
+    linear-gradient(180deg, #f7fbff 0%, #eef8ff 100%);
+}
+.border-0 {
+  border: none !important;
+  border-style: none !important;
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://dratmaranjandash.com/wp-content/uploads/2026/05/856d4da4-e036-420e-8feb-456d765f4df8.webp");
+  background-size: cover;
+  background-position: left center;
+  opacity: 0.2;
+}
+
+
+.video-frame {
+  aspect-ratio: 16 / 10;
+}
+
+.video-frame::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(0, 51, 102, 0.16);
+  border-radius: 1.6rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .video-frame {
+    aspect-ratio: 4 / 5;
+  }
+}

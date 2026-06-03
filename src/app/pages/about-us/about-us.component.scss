@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.section-eyebrow {
+  @apply text-sm font-bold uppercase tracking-[0.3em] text-medical-700;
+}
+
+.section-title {
+  @apply mt-4 text-4xl font-black tracking-tight text-slate-900;
+}
+
+.feature-chip {
+  @apply rounded-full bg-white/10 px-5 py-3 text-sm font-bold backdrop-blur;
+}

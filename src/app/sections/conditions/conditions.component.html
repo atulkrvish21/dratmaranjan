@@ -1,0 +1,41 @@
+<section id="conditions" class="bg-white py-16 lg:py-24">
+  <div class="container-shell">
+    <div class="section-panel p-6 sm:p-8 lg:p-10">
+      <div class="grid gap-10 text-center l lg:items-start">
+        <app-section-heading
+          align="center"
+          eyebrow="Tell Us Where It Hurts"
+          title="Select Your Symptom for Expert Guidance"
+          description="Quick symptom groups inspired by the live site, connected to appointment and WhatsApp intent."
+        />
+
+        
+      </div>
+      <div>
+      <div class="grid mt-8 gap-4 sm:grid-cols-4">
+          @for (condition of conditions; track condition.title) {
+            <article class="overflow-hidden rounded-2xl border border-medical-100 bg-medical-50 transition hover:-translate-y-1 hover:bg-white hover:shadow-soft">
+              @if (condition.image) {
+                <img class="h-36 m-auto object-cover" [src]="condition.image" [alt]="condition.title" loading="lazy">
+              }
+              <div class="p-5">
+                
+                <h3 class="font-extrabold text-ink">{{ condition.title }}</h3>
+                <ul class="mt-3 space-y-2 text-sm font-semibold leading-6 text-slate-600">
+                  @for (point of condition.points ?? []; track point) {
+                    <li>
+                      <a class="transition hover:text-medical-700" [href]="'https://wa.me/919439971946?text=Hello%20Doctor%2C%20I%20have%20' + point + '.%20Please%20help%20me.'" target="_blank" rel="noopener">
+                        + {{ point }}
+                      </a>
+                    </li>
+                  }
+                </ul>
+              </div>
+            </article>
+          }
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</section>

@@ -1,0 +1,189 @@
+<section id="testimonials" class="bg-gradient-to-b from-white to-slate-50 py-16 lg:py-24">
+
+  <div class="container-shell">
+
+    <app-section-heading
+      eyebrow="Google Reviews"
+      title="Trusted by Patients Across Odisha"
+      description="Authentic patient experiences and trusted neurological care."
+    />
+
+    <div class="mx-auto mt-14 max-w-6xl">
+
+      @if (activeTestimonial; as testimonial) {
+
+        <article
+          class="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition-all duration-500 sm:p-10">
+
+          <!-- BACKGROUND DECOR -->
+          <div
+            class="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-medical-100 blur-3xl">
+          </div>
+
+          <div
+            class="absolute -bottom-20 -left-20 h-52 w-52 rounded-full bg-emerald-100 blur-3xl">
+          </div>
+
+          <div class="relative z-10">
+
+            <!-- TOP HEADER -->
+            <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+
+              <!-- USER -->
+              <div class="flex items-center gap-4">
+
+                <!-- GOOGLE STYLE PROFILE -->
+                <div
+                  class="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-gradient-to-br from-medical-600 to-emerald-500 text-2xl font-black text-white shadow-lg">
+
+                  {{ testimonial.name.charAt(0) }}
+
+                </div>
+
+                <!-- USER INFO -->
+                <div>
+
+                  <h3 class="text-xl font-extrabold tracking-tight text-slate-900">
+                    {{ testimonial.name }}
+                  </h3>
+
+                  <div class="mt-1 flex items-center gap-2">
+
+                    <!-- STARS -->
+                    <div class="flex text-base text-amber-400">
+                      ★★★★★
+                    </div>
+
+                    <span class="text-sm font-medium text-slate-500">
+                      2 weeks ago
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- GOOGLE BADGE -->
+              <div
+                class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+
+                <!-- GOOGLE ICON -->
+                <img
+                  src="https://www.gstatic.com/images/branding/product/1x/google_g_48dp.png"
+                  alt="Google"
+                  class="h-7 w-7 object-contain"
+                />
+
+                <div>
+                  <p class="text-sm font-bold text-slate-800">
+                    Google Review
+                  </p>
+
+                  <p class="text-xs text-slate-500">
+                    Verified Patient
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- REVIEW -->
+            <div class="mt-8">
+
+              <svg
+                class="h-10 w-10 text-medical-100"
+                fill="currentColor"
+                viewBox="0 0 32 32">
+
+                <path d="M10 8C5 8 2 12 2 17v7h10v-9H8c0-3 2-5 5-5V8zm14 0c-5 0-8 4-8 9v7h10v-9h-4c0-3 2-5 5-5V8z"/>
+              </svg>
+
+              <p
+                class="mt-4 text-lg leading-9 text-slate-700 sm:text-xl">
+
+                {{ testimonial.review }}
+
+              </p>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div
+              class="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 pt-6">
+
+              <!-- CONDITION -->
+              <div
+                class="rounded-full bg-medical-50 px-5 py-2 text-sm font-bold text-medical-700">
+
+                {{ testimonial.condition }}
+
+              </div>
+
+              <!-- GOOGLE ACTIONS -->
+              <div class="flex items-center gap-5 text-sm text-slate-500">
+
+                <button
+                  class="transition hover:text-medical-700">
+                  👍 Helpful
+                </button>
+
+                <button
+                  class="transition hover:text-medical-700">
+                  Share
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      }
+
+      <!-- SLIDER CONTROLS -->
+      <div class="mt-10 flex items-center justify-center gap-4">
+
+        <button
+          class="grid h-12 w-12 place-items-center rounded-full border border-slate-200 bg-white text-lg shadow-md transition-all hover:-translate-y-1 hover:bg-medical-700 hover:text-white"
+          type="button"
+          (click)="previous()">
+
+          ←
+
+        </button>
+
+        @for (item of testimonials; track item.name; let index = $index) {
+
+          <button
+            class="rounded-full transition-all duration-300"
+            [class.h-3]="true"
+            [class.w-12]="index === activeIndex"
+            [class.w-3]="index !== activeIndex"
+            [class.bg-medical-700]="index === activeIndex"
+            [class.bg-slate-300]="index !== activeIndex"
+            type="button"
+            (click)="setActive(index)">
+          </button>
+
+        }
+
+        <button
+          class="grid h-12 w-12 place-items-center rounded-full border border-slate-200 bg-white text-lg shadow-md transition-all hover:-translate-y-1 hover:bg-medical-700 hover:text-white"
+          type="button"
+          (click)="next()">
+
+          →
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,53 @@
+<footer class="bg-ink pt-14 text-white">
+  <div class="container-shell grid gap-10 pb-12 lg:grid-cols-[1.1fr_0.7fr_0.8fr_1fr]">
+    <div>
+      <a href="#home" class="flex items-center gap-3">
+        <img class="h-14 w-auto rounded-xl bg-white p-1" [src]="doctor.logo" [alt]="doctor.name + ' logo'">
+        <span>
+          <span class="block font-extrabold">{{ doctor.name }}</span>
+          <span class="block text-sm font-semibold text-medical-200">{{ doctor.title }}</span>
+          <small class="block text-[10px] text-medical-100">{{ doctor.tagline }}</small>
+        </span>
+      </a>
+      <p class="mt-5 max-w-sm text-sm leading-7 text-slate-300">
+        Brain and spine neurosurgery care at CARE Hospital, Bhubaneswar.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-extrabold">Quick Links</h3>
+      <div class="mt-4 grid gap-3">
+        @for (link of links; track link.href) {
+          <a class="text-sm font-semibold text-slate-300 transition hover:text-white" [href]="link.href">{{ link.label }}</a>
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-extrabold">Contact</h3>
+      <div class="mt-4 grid gap-3 text-sm font-semibold text-slate-300">
+        <a [href]="'tel:' + doctor.phone">{{ doctor.phone }}</a>
+        <a [href]="'mailto:' + doctor.email">{{ doctor.email }}</a>
+        <span>{{ doctor.address }}</span>
+      </div>
+      <div class="mt-5 flex gap-3">
+        <a class="grid h-10 w-10 place-items-center rounded-full bg-white/10 font-bold hover:bg-medical-500" href="#" aria-label="Facebook">f</a>
+        <a class="grid h-10 w-10 place-items-center rounded-full bg-white/10 font-bold hover:bg-medical-500" href="#" aria-label="Instagram">ig</a>
+        <a class="grid h-10 w-10 place-items-center rounded-full bg-white/10 font-bold hover:bg-medical-500" href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-extrabold">Clinic Map</h3>
+      <div class="mt-4 grid aspect-video place-items-center rounded-3xl border border-white/10 bg-white/10 text-center text-sm font-bold text-medical-100">
+        Google Map Placeholder
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5">
+    <div class="container-shell flex flex-col gap-2 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <p>Copyright 2026 {{ doctor.name }}. All rights reserved.</p>
+      <p>Developed by <a class="text-medical-500 hover:text-medical-300" href="https://www.gramfy.com" target="_blank" rel="noopener noreferrer">Gramfy IT Services Pvt Ltd.</a>.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,156 @@
+{
+"navLinks": [
+  {
+    "label": "Home",
+    "href": "#home"
+  },
+  {
+    "label": "About",
+    "href": "about-us"
+  },
+  {
+    "label": "Services",
+    "href": "#services",
+    "children": [
+      {
+        "label": "Brain Tumor Surgery",
+        "href": "brain-tumor-surgery"
+      },
+      {
+        "label": "Minimally Invasive Spine Surgery",
+        "href": "minimally-invasive-spine-surgery"
+      },
+      {
+        "label": "Endoscopic Spine Surgery",
+        "href": "endoscopic-spine-surgery"
+      },
+      {
+        "label": "Stroke Management",
+        "href": "stroke-management"
+      },
+      {
+        "label": "Trauma & Emergency Neurosurgery",
+        "href": "trauma-emergency-neurosurgery"
+      },
+      {
+        "label": "Spine Fixation & Decompression",
+        "href": "spine-fixation-decompression"
+      },
+      {
+        "label": "Chronic Back Pain Treatment",
+        "href": "chronic-back-pain-treatment"
+      },
+      {
+        "label": "Peripheral Nerve Surgery",
+        "href": "peripheral-nerve-surgery"
+      }
+    ]
+  },
+  {
+    "label": "Gallery",
+    "href": "#gallery",
+    "children": [
+      {
+        "label": "Photos",
+        "href": "photos"
+      },
+      {
+        "label": "Videos",
+        "href": "videos"
+      },
+      {
+        "label": "Awards & Events",
+        "href": "awards"
+      }
+    ]
+  },
+  {
+    "label": "Q&A",
+    "href": "faq"
+  },
+  {
+    "label": "Contact",
+    "href": "contact-us"
+  }
+],
+  "doctor": {
+    "name": "Dr. Atmaranjan Dash",
+    "title": "MBBS | MS | MCh",
+    "tagline": "(Neurosurgery - AlIMS New Delhi)",
+    "summary": "Dr. Atmaranjan Dash is a highly experienced Neuro & Spine Surgeon based in Bhubaneswar, currently serving at CARE Hospital. He is known for his expertise in treating complex neurological and spinal conditions with precision and compassionate care. With advanced training in neurosurgery, Dr. Dash has successfully treated numerous cases related to brain, spine, and nerve disorders.",
+    "image": "assets/images/site/doctor-main.jpeg",
+    "logo": "assets/images/site/logo.png",
+    "phone": "+91 9439971946",
+    "whatsapp": "919439971946",
+    "email": "info@dratmaranjandash.com",
+    "address": "CARE Hospital, Bhubaneswar",
+    "qualifications": [
+      "MBBS from MKCG Medical College, Berhampur",
+      "MS - General Surgery from SCB Medical College, Cuttack",
+      "MCh - Neurosurgery from AIIMS, New Delhi",
+      "MRCS from the Royal College of Surgeons, Edinburgh"
+    ],
+    "certifications": [
+      "Fellowship in Minimally Invasive Spine Surgery - National University Hospital, Singapore",
+      "Fellowship in Skull Base Surgery - University of Pittsburgh Medical Center, USA",
+      "Fellowship in Cerebrovascular Surgery - Tokyo Women's Medical University, Japan",
+      "Senior Fellowship in Complex Spine Surgery - London, UK"
+    ],
+    "experienceHighlights": [
+      "AIIMS Delhi Alumnus",
+      "CARE Hospital Consultant",
+      "16+ Years Experience",
+      "Complex Brain & Spine Surgeries",
+      "Revision Spine Surgery Expert",
+      "Minimally Invasive Techniques",
+      "Brain Aneurysm & Endoscopic Surgery",
+      "High-Risk Case Specialist"
+    ]
+  },
+  "services": [
+    { "icon": "brain", "title": "Brain Tumor Surgery", "description": "Advanced resection with neuromonitoring, awake craniotomy, and neuro-navigation.", "image": "assets/images/site/brain-tumors.png" },
+    { "icon": "activity", "title": "Minimally Invasive Spine Surgery", "description": "MISS techniques for disc herniation and stenosis with faster recovery and less pain.", "image": "assets/images/site/spine-disorders.png" },
+    { "icon": "stethoscope", "title": "Endoscopic Spine Surgery", "description": "Ultra-precise decompression through small incisions and day-care procedures.", "image": "assets/images/site/service-14.png" },
+    { "icon": "heart-pulse", "title": "Stroke Management", "description": "Acute ischemic stroke intervention, mechanical thrombectomy, and rehabilitation.", "image": "assets/images/site/cerebrovascular.png" },
+    { "icon": "shield-check", "title": "Trauma & Emergency Neurosurgery", "description": "24/7 emergency response for head injury, spinal fracture, and intracranial hemorrhage.", "image": "assets/images/site/trauma.png" },
+    { "icon": "clipboard-check", "title": "Spine Fixation & Decompression", "description": "Instrumented fusion, laminectomy, and spinal stabilization for trauma or degeneration.", "image": "assets/images/site/service-15.png" },
+    { "icon": "sparkles", "title": "Chronic Back Pain Treatment", "description": "Multimodal care including nerve blocks, radiofrequency ablation, and surgical solutions.", "image": "assets/images/site/service-16.png" },
+    { "icon": "hand-heart", "title": "Peripheral Nerve Surgery", "description": "Nerve decompression, nerve repair, brachial plexus injuries, and carpal tunnel release.", "image": "assets/images/site/service-17.png" }
+  ],
+  "conditions": [
+    { "icon": "brain", "title": "Head & Brain", "description": "Headache / Migraine, Brain Tumor Symptoms, Dizziness / Vertigo, Seizures / Epilepsy, Memory Loss", "image": "assets/images/site/head-brain.png", "points": ["Headache / Migraine", "Brain Tumor Symptoms", "Dizziness / Vertigo", "Seizures / Epilepsy", "Memory Loss"] },
+    { "icon": "stethoscope", "title": "Neck & Spine", "description": "Neck Pain, Slip Disc / Herniated Disc, Lower Back Pain, Spinal Stenosis, Sciatica / Leg Pain", "image": "assets/images/site/neck-spine.png", "points": ["Neck Pain", "Slip Disc / Herniated Disc", "Lower Back Pain", "Spinal Stenosis", "Sciatica / Leg Pain"] },
+    { "icon": "activity", "title": "Nerves & Extremities", "description": "Carpal Tunnel / Wrist Pain, Tingling / Numbness, Arm / Shoulder Pain, Leg Weakness, Foot Drop", "image": "assets/images/site/nerves-extremities.png", "points": ["Carpal Tunnel / Wrist Pain", "Tingling / Numbness", "Arm / Shoulder Pain", "Leg Weakness", "Foot Drop"] },
+    { "icon": "shield-check", "title": "Trauma & Emergency", "description": "Head Injury, Spine Injury, Stroke Symptoms, Sudden Weakness, Brain Hemorrhage", "image": "assets/images/site/emergency.png", "points": ["Head Injury", "Spine Injury", "Stroke Symptoms", "Sudden Weakness", "Brain Hemorrhage"] }
+  ],
+  "stats": [
+    { "value": "16+", "label": "Years Experience" },
+    { "value": "469", "label": "Google Reviews" },
+    { "value": "4.9", "label": "Patient Rating" },
+    { "value": "24/7", "label": "Emergency Care" }
+  ],
+  "trust": [
+    { "icon": "badge-check", "title": "Highly Experienced", "description": "16+ years of experience and AIIMS Delhi alumni training." },
+    { "icon": "sparkles", "title": "Advanced Techniques", "description": "Minimally invasive and endoscopic neurosurgical approaches." },
+    { "icon": "hand-heart", "title": "Patient-Centric Care", "description": "Empathy, clear communication, and compassionate care." },
+    { "icon": "activity", "title": "International Training", "description": "Globally trained neurosurgical expert with advanced fellowships." },
+    { "icon": "clipboard-check", "title": "Accurate Diagnosis", "description": "High precision imaging, planning, and clinical decision making." },
+    { "icon": "shield-check", "title": "Trusted by Thousands", "description": "Proven outcomes and patient satisfaction in complex cases." }
+  ],
+  "testimonials": [
+    { "name": "Hemant Kumar", "condition": "Spine surgery", "rating": 5, "review": "Sir did my spinal surgery three years ago. Now I am completely fine and can do everything like a normal person in daily life." },
+    { "name": "Arman Raj", "condition": "Google review", "rating": 5, "review": "Best Neurosurgeon in Odisha." },
+    { "name": "Ramesh Patra", "condition": "Spine care", "rating": 5, "review": "Very good behaviour of doctor to the patient and attendant. Good advice and sincere working. Before operation I could not stand straight but now I am standing easily and perfectly." },
+    { "name": "Nihal Pradhan", "condition": "Google review", "rating": 5, "review": "Very good doctor." }
+  ],
+  "faqs": [
+    { "question": "When should I see a neurosurgeon?", "answer": "You should consult a neurosurgeon if you experience severe or persistent headaches, chronic back or neck pain, numbness or tingling in arms or legs, sudden weakness, loss of balance, seizures, memory problems, or head and spine injury. Early consultation can prevent serious complications." },
+    { "question": "How long is recovery after brain surgery?", "answer": "Recovery depends on the type and complexity of surgery. Hospital stay may be 3-7 days, initial recovery 2-4 weeks, full recovery 6-12 weeks, and return to work 4-8 weeks depending on job type. Dr. Dash provides personalized recovery plans and follow-up care." },
+    { "question": "What conditions does Dr. Dash treat?", "answer": "Dr. Dash specializes in brain tumors, spine disorders, stroke and cerebrovascular diseases, head and spine trauma, nerve compression, and pediatric neurosurgery." },
+    { "question": "Does insurance cover neurosurgery?", "answer": "Yes, most major insurance providers cover neurosurgical procedures. CARE Hospital is empaneled with CGHS, state government insurance schemes, private health insurance companies, and Ayushman Bharat PMJAY." },
+    { "question": "What is minimally invasive spine surgery?", "answer": "Minimally invasive spine surgery uses smaller incisions, often 1-2 cm, compared to traditional open surgery. Benefits include less muscle damage, reduced blood loss, faster recovery, shorter hospital stay, and less post-operative pain." },
+    { "question": "Is spine surgery always necessary for back pain?", "answer": "No. Surgery is recommended only when conservative treatments fail, there is progressive nerve damage or weakness, severe pain affects daily life, or there is loss of bladder or bowel control. Dr. Dash explores non-surgical options first." },
+    { "question": "How can I book an appointment?", "answer": "You can book an appointment through WhatsApp, call 9439971946, or visit CARE Hospital, Bhubaneswar. Same-day appointments are available for emergency cases." },
+    { "question": "What are the signs of a stroke?", "answer": "Remember FAST: Face drooping, Arm weakness, Speech difficulty, and Time to call for immediate medical attention. Early treatment saves lives." }
+  ]
+}

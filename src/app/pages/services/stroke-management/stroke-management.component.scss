@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.section-eyebrow {
+  @apply text-sm font-bold uppercase tracking-[0.35em] text-medical-700;
+}
+
+.section-title {
+  @apply mt-4 text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-5xl;
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14, 165, 233, 0.03),
+      rgba(16, 185, 129, 0.03)
+    );
+
+  pointer-events: none;
+}

@@ -1,0 +1,22 @@
+.testimonial-card {
+  min-height: 312px;
+}
+
+.slider-button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid #b6efdf;
+  border-radius: 999px;
+  color: #146b61;
+  background: #fff;
+  font-size: 28px;
+  line-height: 1;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.slider-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(20, 85, 78, 0.14);
+}

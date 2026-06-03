@@ -1,0 +1,51 @@
+<section id="home" class="hero-pattern overflow-hidden pb-16 pt-32 sm:pt-36 lg:pb-20">
+  <div class="container-shell hero-bg grid items-center gap-10 lg:grid-cols-[0.96fr_1.04fr]">
+    <div class="max-w-3xl rounded-[2rem]  bg-white/72 p-6 shadow-soft backdrop-blur sm:p-8 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0">
+      <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-medical-100 bg-white px-4 py-2 text-sm font-bold text-medical-800 shadow-sm">
+        <span class="h-2.5 w-2.5 rounded-full bg-medical-500"></span>
+        Personalized Care for Advanced Neurosurgery
+      </div>
+      <h1 class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">{{ doctor.name }}</h1>
+      <p class="mt-5 max-w-2xl text-xl font-extrabold leading-8 text-medical-900">{{ doctor.title }}</p>
+      <p class="mt-2 max-w-2xl text-lg font-bold leading-8 text-medical-800">{{ doctor.tagline }}</p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        @for (item of heroHighlights; track item) {
+          <span class="inline-flex items-center gap-2 rounded-full border border-medical-100 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm">
+            <span class="grid h-5 w-5 place-items-center rounded-full bg-medical-600 text-xs text-white">+</span>
+            {{ item }}
+          </span>
+        }
+      </div>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a class="btn-primary" href="#appointment">Book An Appointment</a>
+        <a class="btn-secondary" [href]="'tel:' + doctor.phone">Call Clinic</a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute -left-4 top-8 z-10 hidden rounded-2xl bg-white p-4 shadow-soft sm:block">
+        <p class="text-xs font-bold uppercase text-medical-600">Trusted Neurosurgeon</p>
+        <p class="mt-1 text-sm font-bold text-ink">CARE Hospital, Bhubaneswar</p>
+      </div>
+      <div class="video-frame relative mx-auto overflow-hidden rounded-[2rem] border border-white bg-white shadow-lift">
+        <video
+          class="h-full w-full object-cover"
+          [src]="heroVideo"
+          autoplay
+          loop
+          muted
+          playsinline
+          controlsList="nodownload"
+          preload="metadata"
+          [attr.aria-label]="doctor.name + ' neurosurgery introduction video'"
+        ></video>
+      </div>
+      <div class="absolute bottom-5 right-0 rounded-2xl bg-medical-900 px-5 py-4 text-white shadow-lift sm:right-5">
+        <p class="text-xs font-bold uppercase text-medical-100">Specialist</p>
+        <p class="mt-1 text-sm font-bold">Complex Revision Brain & Spine Surgery</p>
+      </div>
+    </div>
+  </div>
+</section>

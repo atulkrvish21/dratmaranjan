@@ -1,0 +1,249 @@
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+   
+    <section class="bg-white">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-medical-950 py-20 text-white">
+
+    <div class="inset-0  opacity-90">
+      <img
+        src="https://dratmaranjandash.com/wp-content/uploads/2026/03/Dr_.webp"
+        class="h-full w-full object-cover"
+      />
+    </div>
+
+    <div class="container-shell mt-20 relativez-10">
+
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+
+        <!-- CONTENT -->
+        <div>
+
+          <p class="text-xl font-bold uppercase tracking-[0.3em] text-medical-900">
+            Trusted Neurosurgeon
+          </p>
+
+          <h1 class="mt-5 text-5xl font-black leading-tight  text-slate-900">
+            About Dr. Atmaranjan Dash
+          </h1>
+
+          <p class="mt-8  leading-9 text-slate-900">
+
+            Dr. Atmaranjan Dash is a highly experienced Neuro & Spine Surgeon based in Bhubaneswar, currently serving at CARE Hospital. He is known for his expertise in treating complex neurological and spinal conditions with precision and compassionate care.<br /><br />
+
+With advanced training in neurosurgery (MBBS, MS, MCh – Neurosurgery, AIIMS New Delhi), Dr. Dash has successfully treated numerous cases related to brain, spine, and nerve disorders. His patient-first approach, accurate diagnosis, and advanced surgical techniques make him one of the trusted neurosurgeons in Odisha.
+
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+
+            <div class="feature-chip">
+              AIIMS Delhi Alumnus
+            </div>
+
+            <div class="feature-chip">
+              CARE Hospital Consultant
+            </div>
+
+            <div class="feature-chip">
+              16+ Years Experience
+            </div>
+
+          </div>
+
+          <a
+            href="#appointment"
+            class="btn-primary mt-10 inline-flex">
+
+            Book Appointment
+
+          </a>
+
+        </div>
+
+        <!-- IMAGE -->
+        <div class="relative">
+
+          <div class="absolute -inset-5 rounded-[3rem] bg-medical-400/20 blur-3xl">
+          </div>
+
+          <img
+            src="https://dratmaranjandash.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-20-at-10.21.58-AM-e1778654377268.jpeg"
+            class="relative h-80 w-auto z-10 rounded-[3rem] shadow-2xl"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SPECIALIZATIONS -->
+  <section class="py-20">
+
+    <div class="container-shell">
+
+      <div class="text-center">
+
+        <p class="section-eyebrow">
+          Specializations
+        </p>
+
+        <h2 class="section-title">
+          Expert Neurological Care
+        </h2>
+
+      </div>
+
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        @for (item of specializations; track item) {
+
+          <article
+            class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+            <div
+              class="grid h-16 w-16 place-items-center rounded-2xl bg-medical-50 text-3xl">
+
+              🧠
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-black text-slate-900">
+              {{ item }}
+            </h3>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="bg-slate-50 py-20">
+
+    <div class="container-shell">
+
+      <div class="grid gap-10 lg:grid-cols-2">
+
+        <!-- EDUCATION -->
+        <div class="rounded-[2rem] bg-white p-10 shadow-xl">
+
+          <h2 class="text-3xl font-black text-slate-900">
+            Education & Training
+          </h2>
+
+          <div class="mt-8 grid gap-5">
+
+            @for (item of education; track item) {
+
+              <div class="flex gap-4">
+
+                <div
+                  class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-medical-100 font-bold text-medical-700">
+
+                  ✓
+
+                </div>
+
+                <p class="leading-8 text-slate-700">
+                  {{ item }}
+                </p>
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+        <!-- RECOGNITIONS -->
+        <div class="rounded-[2rem] bg-medical-900 p-10 text-white shadow-xl">
+
+          <h2 class="text-3xl font-black">
+            Recognitions & Expertise
+          </h2>
+
+          <div class="mt-8 grid gap-5">
+
+            @for (item of recognitions; track item) {
+
+              <div class="flex gap-4">
+
+                <div
+                  class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-white/10 font-bold">
+
+                  ★
+
+                </div>
+
+                <p class="leading-8 text-slate-200">
+                  {{ item }}
+                </p>
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+  <section class="py-20">
+
+    <div class="container-shell">
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        @for (stat of stats; track stat.label) {
+
+          <article
+            class="rounded-[2rem] bg-gradient-to-br from-medical-700 to-emerald-600 p-10 text-center text-white shadow-2xl">
+
+            <h3 class="text-5xl font-black">
+              {{ stat.value }}
+            </h3>
+
+            <p class="mt-4 text-lg font-semibold">
+              {{ stat.label }}
+            </p>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+     </main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <a
+    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-lift transition hover:-translate-y-1"
+    [href]="'https://wa.me/' + content.doctor.whatsapp + '?text=Hello%20Doctor%2C%20I%20want%20to%20book%20an%20appointment%20for%20consultation'"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    WA
+  </a>
+}

@@ -1,0 +1,324 @@
+@if (content$ | async; as content) {
+
+  <app-navbar
+    [links]="content.navLinks"
+    [doctor]="content.doctor" />
+
+  <main class="overflow-hidden bg-white">
+
+    <!-- HERO -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-medical-950 via-medical-900 to-emerald-950 pt-28 pb-16 text-white lg:pt-36 lg:pb-24">
+
+      <!-- BACKGROUND -->
+      <div class="absolute inset-0 opacity-15">
+
+        <img
+          src="https://dratmaranjandash.com/wp-content/uploads/2026/03/df5601cc-7cfe-47b1-bcb6-0127f99c281a.webp"
+          class="h-full w-full object-cover object-center"
+        />
+
+      </div>
+
+      <!-- OVERLAY -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.25),transparent_35%)]">
+      </div>
+
+      <div class="container-shell relative z-10">
+
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+
+          <!-- LEFT -->
+          <div class="max-w-2xl">
+
+             <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-medical-100 bg-white px-4 py-2 text-sm font-bold text-medical-800 shadow-sm">
+        <span class="h-2.5 w-2.5 rounded-full bg-medical-500"></span>
+         Ultra-Minimally Invasive
+      </div>
+
+            <h1
+              class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">
+
+              Endoscopic Spine Surgery
+
+            </h1>
+
+            <p
+              class="mt-5 max-w-2xl  leading-8 text-medical-900">
+
+              The most advanced form of spine surgery using a tiny camera and instruments through a 8mm incision. Day-care procedure with immediate relief.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+              <a
+                href="#appointment"
+                class="btn-primary">
+
+                Consult Dr. Dash
+
+              </a>
+
+              
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+          <div class="relative mx-auto w-full max-w-2xl">
+
+            <!-- GLOW -->
+            <div
+              class="absolute -inset-5 rounded-[3rem] bg-emerald-500/20 blur-3xl">
+            </div>
+
+            <!-- IMAGE -->
+            <div
+              class="relative overflow-hidden rounded-[2.5rem] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+
+              <img
+                src="https://dratmaranjandash.com/wp-content/uploads/2026/03/df5601cc-7cfe-47b1-bcb6-0127f99c281a.webp"
+                class="aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  <!-- endoscopic-spine.component.html -->
+
+<section class="relative overflow-hidden bg-gradient-to-b from-white to-slate-50 py-16 lg:py-24">
+
+  <!-- BACKGROUND GLOW -->
+  <div
+    class="absolute left-0 top-0 h-96 w-96 rounded-full bg-medical-100 blur-3xl">
+  </div>
+
+  <div
+    class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-100 blur-3xl">
+  </div>
+
+  <div class="container-shell relative z-10">
+
+    <div class="grid gap-8 lg:grid-cols-2">
+
+      <!-- WHAT IS SECTION -->
+      <article
+        class="group relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white/90 p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(15,23,42,0.12)] lg:p-10">
+
+        <!-- DECOR -->
+        <div
+          class="absolute right-0 top-0 h-40 w-40 rounded-full bg-medical-100 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100">
+        </div>
+
+        <!-- HEADER -->
+        <div class="relative z-10 flex items-start gap-5">
+
+          <div
+            class="grid h-16 w-16 shrink-0 place-items-center rounded-[1.5rem] bg-gradient-to-br from-medical-700 to-emerald-500 text-3xl text-white shadow-xl">
+
+            🔬
+
+          </div>
+
+          <div>
+
+            <p
+              class="text-sm font-bold uppercase tracking-[0.3em] text-medical-700">
+
+              Advanced Neurosurgery
+
+            </p>
+
+            <h2
+              class="mt-2 text-3xl font-black leading-tight tracking-tight text-slate-900">
+
+              What is Endoscopic
+              Spine Surgery?
+
+            </h2>
+
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="relative z-10 mt-8">
+
+          <p
+            class="text-base leading-9 text-slate-600">
+
+            Endoscopic spine surgery uses a tiny camera and specialized
+            instruments inserted through an 8-10mm incision. The magnified
+            high-definition visualization enables precise decompression with
+            minimal tissue damage and faster recovery.
+
+          </p>
+
+        </div>
+
+        <!-- FEATURE TAGS -->
+        <div
+          class="relative z-10 mt-8 flex flex-wrap gap-3">
+
+          <div
+            class="rounded-full bg-medical-50 px-5 py-3 text-sm font-bold text-medical-700">
+
+            8-10mm Incision
+
+          </div>
+
+          <div
+            class="rounded-full bg-medical-50 px-5 py-3 text-sm font-bold text-medical-700">
+
+            HD Visualization
+
+          </div>
+
+          <div
+            class="rounded-full bg-medical-50 px-5 py-3 text-sm font-bold text-medical-700">
+
+            Faster Recovery
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- CONDITIONS -->
+      <article
+        class="group relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-medical-900 via-medical-800 to-emerald-900 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(15,23,42,0.2)] lg:p-10">
+
+        <!-- GLOW -->
+        <div
+          class="absolute left-0 top-0 h-40 w-40 rounded-full bg-emerald-400/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100">
+        </div>
+
+        <!-- HEADER -->
+        <div class="relative z-10 flex items-start gap-5">
+
+          <div
+            class="grid h-16 w-16 shrink-0 place-items-center rounded-[1.5rem] bg-white/10 text-3xl shadow-xl backdrop-blur">
+
+            ⚡
+
+          </div>
+
+          <div>
+
+            <p
+              class="text-sm font-bold uppercase tracking-[0.3em] text-emerald-300">
+
+              Spine Disorders
+
+            </p>
+
+            <h2
+              class="mt-2 text-3xl font-black leading-tight tracking-tight">
+
+              Conditions Treated
+
+            </h2>
+
+          </div>
+
+        </div>
+
+        <!-- LIST -->
+        <div
+          class="relative z-10 mt-10 grid gap-4">
+
+          @for (item of conditions; track item) {
+
+            <div
+              class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur transition duration-300 hover:bg-white/15">
+
+              <div
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-emerald-400 font-black text-black">
+
+                ✓
+
+              </div>
+
+              <p
+                class="font-semibold text-white">
+
+                {{ item }}
+
+              </p>
+
+            </div>
+
+          }
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+    <!-- CTA -->
+    <section class="pb-16 lg:pb-24">
+
+      <div class="container-shell">
+
+        <div
+          class="overflow-hidden rounded-[3rem] bg-gradient-to-r from-medical-700 to-emerald-600 px-8 py-14 text-center text-white shadow-2xl sm:px-12">
+
+          <h2 class="text-3xl font-black sm:text-4xl">
+            Need Expert Advice?
+          </h2>
+
+          <p
+            class="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+
+            Book a consultation with Dr. Atmaranjan Dash for expert brain tumor evaluation and treatment planning.
+
+          </p>
+
+          <a
+            href="https://wa.me/919439971946"
+            target="_blank"
+            class="mt-10 inline-flex rounded-full bg-white px-8 py-4 font-black text-medical-900 transition duration-300 hover:scale-105">
+
+            Book Appointment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <app-footer
+    [links]="content.navLinks"
+    [doctor]="content.doctor" />
+
+  <!-- WHATSAPP -->
+  <a
+    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:scale-110"
+    [href]="'https://wa.me/' + content.doctor.whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp">
+
+    WA
+
+  </a>
+
+}

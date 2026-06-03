@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f7fbff;
+  color: #07253f;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.app-reveal {
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  
+  filter: blur(8px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms ease;
+  will-change: opacity, transform, filter;
+}
+
+.app-reveal-left {
+  transform: translateX(-480px);
+}
+
+.app-reveal-right {
+  transform: translateX(480px);
+}
+
+.app-reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .app-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-medical-600 px-6 py-3 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-medical-700 hover:shadow-lift focus:outline-none focus:ring-4 focus:ring-medical-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-medical-200 bg-white px-6 py-3 text-sm font-bold text-medical-800 shadow-sm transition hover:-translate-y-0.5 hover:border-medical-400 hover:bg-medical-50 focus:outline-none focus:ring-4 focus:ring-medical-100;
+  }
+
+  .section-panel {
+    @apply rounded-[28px] border border-medical-100 bg-white shadow-soft;
+  }
+}

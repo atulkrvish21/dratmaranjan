@@ -1,0 +1,30 @@
+<section id="faq" class="bg-medical-50 py-16 lg:py-24">
+  <div class="container-shell">
+    <app-section-heading
+      eyebrow="Frequently Asked Questions"
+      title="Common Questions About Neurosurgery and Spine Care"
+      description="Find answers before consultation, from symptoms and surgery recovery to appointment booking."
+    />
+
+    <div class="mx-auto mt-12 max-w-3xl space-y-0">
+      @for (faq of faqs; track faq.question; let index = $index) {
+        <article class="border border-medical-100 bg-white shadow-sm">
+          <button
+            class="flex w-full items-center justify-between gap-4 px-6 py-2 text-left"
+            type="button"
+            [attr.aria-expanded]="openIndex === index"
+            (click)="toggle(index)"
+          >
+            <span class="text-base font-extrabold text-ink">{{ faq.question }}</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-medical-50 text-xl font-bold text-medical-700">
+              {{ openIndex === index ? '-' : '+' }}
+            </span>
+          </button>
+          <div class="faq-body" [class.is-open]="openIndex === index">
+            <p class="px-6 pb-2 text-sm leading-7 text-slate-600">{{ faq.answer }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

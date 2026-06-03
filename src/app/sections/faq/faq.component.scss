@@ -1,0 +1,13 @@
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 240ms ease;
+}
+
+.faq-body > p {
+  overflow: hidden;
+}
+
+.faq-body.is-open {
+  grid-template-rows: 1fr;
+}

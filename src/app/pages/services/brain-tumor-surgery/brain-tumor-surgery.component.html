@@ -1,0 +1,349 @@
+@if (content$ | async; as content) {
+
+  <app-navbar
+    [links]="content.navLinks"
+    [doctor]="content.doctor" />
+
+  <main class="overflow-hidden bg-white">
+
+    <!-- HERO -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-medical-950 via-medical-900 to-emerald-950 pt-28 pb-16 text-white lg:pt-36 lg:pb-24">
+
+      <!-- BACKGROUND -->
+      <div class="absolute inset-0 opacity-15">
+
+        <img
+          src="https://dratmaranjandash.com/wp-content/uploads/2026/03/Brain-Tumor-Surgery.webp"
+          class="h-full w-full object-cover object-center"
+        />
+
+      </div>
+
+      <!-- OVERLAY -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.25),transparent_35%)]">
+      </div>
+
+      <div class="container-shell relative z-10">
+
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+
+          <!-- LEFT -->
+          <div class="max-w-2xl">
+
+             <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-medical-100 bg-white px-4 py-2 text-sm font-bold text-medical-800 shadow-sm">
+        <span class="h-2.5 w-2.5 rounded-full bg-medical-500"></span>
+        Advanced Neurosurgeon
+      </div>
+
+            <h1
+              class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">
+
+              Brain Tumor Surgery
+
+            </h1>
+
+            <p
+              class="mt-5 max-w-2xl  leading-8 text-medical-900">
+
+              Expert treatment for all types of brain tumors using awake
+              craniotomy, neuro-navigation and intraoperative monitoring.
+
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+              <a
+                href="#appointment"
+                class="btn-primary">
+
+                Consult Dr. Dash
+
+              </a>
+
+             
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+          <div class="relative mx-auto w-full max-w-2xl">
+
+            <!-- GLOW -->
+            <div
+              class="absolute -inset-5 rounded-[3rem] bg-emerald-500/20 blur-3xl">
+            </div>
+
+            <!-- IMAGE -->
+            <div
+              class="relative overflow-hidden rounded-[2.5rem] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+
+              <img
+                src="https://dratmaranjandash.com/wp-content/uploads/2026/03/Brain-Tumor-Surgery.webp"
+                class="aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONDITIONS + TECHNIQUES -->
+    <section class="bg-slate-50 py-16 lg:py-24">
+
+      <div class="container-shell">
+
+        <div class="grid gap-8 lg:grid-cols-2">
+
+          <!-- CONDITIONS -->
+          <article
+            class="h-full rounded-[2rem] bg-white p-7 shadow-xl sm:p-10">
+
+            <h2 class="text-3xl font-black text-slate-900">
+              Conditions Treated
+            </h2>
+
+            <div class="mt-8 grid gap-4">
+
+              @for (item of conditions; track item) {
+
+                <div
+                  class="flex items-center gap-4 rounded-2xl bg-medical-50 px-5 py-4">
+
+                  <div
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-medical-700 text-white">
+
+                    ✓
+
+                  </div>
+
+                  <p class="font-semibold text-slate-700">
+                    {{ item }}
+                  </p>
+
+                </div>
+
+              }
+
+            </div>
+
+          </article>
+
+          <!-- TECHNIQUES -->
+          <article
+            class="h-full rounded-[2rem] bg-medical-900 p-7 text-white shadow-xl sm:p-10">
+
+            <h2 class="text-3xl font-black">
+              Advanced Techniques
+            </h2>
+
+            <div class="mt-8 grid gap-4">
+
+              @for (item of techniques; track item) {
+
+                <div
+                  class="flex items-center gap-4 rounded-2xl bg-white/10 px-5 py-4 backdrop-blur">
+
+                  <div
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-emerald-500 font-bold text-black">
+
+                    ★
+
+                  </div>
+
+                  <p class="font-semibold">
+                    {{ item }}
+                  </p>
+
+                </div>
+
+              }
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="py-16 lg:py-24">
+
+      <div class="container-shell">
+
+        <div class="mx-auto max-w-3xl text-center">
+
+          <p class="section-eyebrow">
+            Why Choose Us
+          </p>
+
+          <h2 class="section-title">
+            Why Choose Dr. Dash?
+          </h2>
+
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+          @for (item of whyChoose; track item.title) {
+
+            <article
+              class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+              <div
+                class="grid h-16 w-16 place-items-center rounded-2xl bg-medical-50 text-3xl transition duration-300 group-hover:bg-medical-700 group-hover:text-white">
+
+                {{ item.icon }}
+
+              </div>
+
+              <h3 class="mt-6 text-2xl font-black text-slate-900">
+                {{ item.title }}
+              </h3>
+
+              <p class="mt-4 leading-8 text-slate-600">
+                {{ item.description }}
+              </p>
+
+            </article>
+
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FAQ -->
+    <section
+      id="faq"
+      class="bg-slate-50 py-16 lg:py-24">
+
+      <div class="container-shell max-w-5xl">
+
+        <div class="text-center">
+
+          <p class="section-eyebrow">
+            Frequently Asked Questions
+          </p>
+
+          <h2 class="section-title">
+            Common Questions
+          </h2>
+
+        </div>
+
+        <div class="mt-14 grid gap-5">
+
+          @for (faq of faqs; track faq.question; let i = $index) {
+
+            <article
+              class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-lg">
+
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-5 px-6 py-6 text-left sm:px-8"
+                (click)="toggleFaq(i)">
+
+                <span
+                  class="text-base font-black leading-7 text-slate-900 sm:text-lg">
+
+                  {{ faq.question }}
+
+                </span>
+
+                <span
+                  class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-medical-50 text-xl font-black text-medical-700">
+
+                  {{ activeFaq === i ? '−' : '+' }}
+
+                </span>
+
+              </button>
+
+              @if (activeFaq === i) {
+
+                <div
+                  class="border-t border-slate-100 px-6 py-6 sm:px-8">
+
+                  <p class="leading-8 text-slate-600">
+                    {{ faq.answer }}
+                  </p>
+
+                </div>
+
+              }
+
+            </article>
+
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-16 lg:pb-24">
+
+      <div class="container-shell">
+
+        <div
+          class="overflow-hidden rounded-[3rem] bg-gradient-to-r from-medical-700 to-emerald-600 px-8 py-14 text-center text-white shadow-2xl sm:px-12">
+
+          <h2 class="text-3xl font-black sm:text-4xl">
+            Need Expert Advice?
+          </h2>
+
+          <p
+            class="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+
+            Book a consultation with Dr. Atmaranjan Dash for expert brain tumor evaluation and treatment planning.
+
+          </p>
+
+          <a
+            href="https://wa.me/919439971946"
+            target="_blank"
+            class="mt-10 inline-flex rounded-full bg-white px-8 py-4 font-black text-medical-900 transition duration-300 hover:scale-105">
+
+            Book Appointment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <app-footer
+    [links]="content.navLinks"
+    [doctor]="content.doctor" />
+
+  <!-- WHATSAPP -->
+  <a
+    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:scale-110"
+    [href]="'https://wa.me/' + content.doctor.whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp">
+
+    WA
+
+  </a>
+
+}

@@ -1,0 +1,207 @@
+<header class="fixed inset-x-0 top-0 z-50 transition-all duration-300" [class.nav-scrolled]="scrolled">
+  <nav class="container-shell py-3">
+    <div class="flex items-center justify-between rounded-full border border-white/80 bg-white/90 px-4 py-3 shadow-soft backdrop-blur-xl lg:px-5">
+      <a href="#home" class="flex items-center gap-3" aria-label="Go to home">
+        <img class=" h-12 w-auto max-w-[240px] sm:block" [src]="doctor.logo" [alt]="doctor.name + ' logo'">
+        
+        <span class="leading-tight">
+          <span class="block text-sm font-extrabold text-ink sm:text-base">{{ doctor.name }}</span>
+          <span class="block text-xs font-semibold text-medical-700">{{ doctor.title }}</span>
+          <small class="block text-[10px] text-medical-500">{{ doctor.tagline }}</small>
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-7 lg:flex">
+       <nav class="hidden items-center gap-8 lg:flex">
+
+  @for (link of links; track link.href) {
+
+    <!-- MENU WITH SUBMENU -->
+    @if (link.children?.length) {
+
+      <div class="group relative">
+
+        <!-- MAIN MENU -->
+        <a
+          [href]="link.href"
+          class="flex items-center gap-2 text-sm font-bold text-slate-700 transition hover:text-medical-700">
+
+          {{ link.label }}
+
+          <!-- ARROW -->
+          <svg
+            class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7">
+            </path>
+
+          </svg>
+
+        </a>
+
+        <!-- SUBMENU -->
+        <div
+          class="invisible absolute left-0 top-full z-50 mt-4 w-72 translate-y-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+
+          <div
+            class="overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
+
+            <div class="grid gap-1">
+
+              @for (child of link.children; track child.href) {
+
+                <a
+                  [href]="child.href"
+                  class="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-medical-50 hover:text-medical-700">
+
+                  {{ child.label }}
+
+                </a>
+
+              }
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+    <!-- NORMAL MENU -->
+    @else {
+
+      <a
+        [href]="link.href"
+        class="text-sm font-bold text-slate-700 transition hover:text-medical-700">
+
+        {{ link.label }}
+
+      </a>
+
+    }
+
+  }
+
+</nav>
+
+      </div>
+
+      <div class="hidden items-center gap-3 lg:flex">
+        <a class="text-sm font-bold text-medical-800" [href]="'tel:' + doctor.phone">{{ doctor.phone }}</a>
+        <a class="btn-primary px-5 py-2.5" href="#appointment">Make an Appointment</a>
+      </div>
+
+      <button
+        class="grid h-11 w-11 place-items-center rounded-full border border-medical-100 text-medical-800 lg:hidden"
+        type="button"
+        aria-label="Open navigation menu"
+        (click)="menuOpen = !menuOpen"
+      >
+        <span class="hamburger" [class.is-open]="menuOpen"></span>
+      </button>
+    </div>
+
+    
+<!-- DESKTOP + MOBILE NAVIGATION -->
+
+<!-- DESKTOP -->
+
+<!-- MOBILE MENU -->
+@if (menuOpen) {
+
+  <div
+    class="mt-3 rounded-3xl border border-medical-100 bg-white p-4 shadow-soft lg:hidden">
+
+    <div class="grid gap-2">
+
+      @for (link of links; track link.href) {
+
+        <div>
+
+          <!-- MAIN LINK -->
+          <a
+            class="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-bold text-slate-700 transition hover:bg-medical-50"
+            [href]="link.href"
+            (click)="!link.children?.length ? closeMenu() : null">
+
+            <span>
+              {{ link.label }}
+            </span>
+
+            @if (link.children?.length) {
+
+              <svg
+                class="h-4 w-4 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7">
+                </path>
+
+              </svg>
+
+            }
+
+          </a>
+
+          <!-- SUBMENU -->
+          @if (link.children?.length) {
+
+            <div
+              class="mt-1 ml-4 grid gap-1 border-l border-medical-100 pl-3">
+
+              @for (child of link.children; track child.href) {
+
+                <a
+                  class="rounded-xl px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-medical-50 hover:text-medical-700"
+                  [href]="child.href"
+                  (click)="closeMenu()">
+
+                  {{ child.label }}
+
+                </a>
+
+              }
+
+            </div>
+
+          }
+
+        </div>
+
+      }
+
+      <!-- APPOINTMENT BUTTON -->
+      <a
+        class="btn-primary mt-3 w-full"
+        href="#appointment"
+        (click)="closeMenu()">
+
+        Make an Appointment
+
+      </a>
+
+    </div>
+
+  </div>
+
+}
+
+
+  </nav>
+</header>
