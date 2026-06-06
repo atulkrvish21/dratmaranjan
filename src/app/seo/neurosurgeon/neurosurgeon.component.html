@@ -1,0 +1,151 @@
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+<section class="hero" aria-label="Neurosurgeon in Bhubaneswar">
+    <div class="container">
+        <h1>Best Neurosurgeon in {{ slug | titlecase }} — Advanced Brain & Spine Care</h1>
+        <p class="lead">
+            Expert neurosurgical care combining modern technology, decades of experience, and compassionate patient-first service.
+        </p>
+        <div class="hero-cta">
+            <a class="btn primary" href="tel:+91-94399-71946" aria-label="Call clinic">Call: +91 94399 71946</a>
+            <a class="btn outline" href="#contact" aria-label="Request appointment">Request Appointment</a>
+        </div>
+        <ul class="credentials" aria-hidden="false">
+            <li>Board-certified neurosurgeon</li>
+            <li>Minimally invasive spine & skull base surgery</li>
+            <li>Emergency & trauma neurosurgery</li>
+        </ul>
+    </div>
+</section>
+
+<section id="about" class="section about" aria-labelledby="about-heading">
+    <div class="container">
+        <h2 id="about-heading">About Our Neurosurgery Care</h2>
+        <p>
+            Serving patients across {{ slug | titlecase }} and Odisha, our neurosurgery team treats complex brain, spinal and nerve disorders with evidence-based treatments, personalized plans, and multidisciplinary collaboration.
+        </p>
+    </div>
+</section>
+
+<section class="expertise section" aria-labelledby="expertise-heading">
+    <div class="container">
+        <h2 id="expertise-heading">Areas of Expertise</h2>
+        <ul class="grid-list">
+            <li><strong>Brain Tumors</strong> — microsurgical and skull base approaches</li>
+            <li><strong>Spine Disorders</strong> — degenerative disease, disc herniation, stenosis</li>
+            <li><strong>Spinal Cord Compression & Trauma</strong></li>
+            <li><strong>Pain Management</strong> — spinal injections, radiofrequency ablation</li>
+            <li><strong>Functional Neurosurgery</strong> — epilepsy, movement disorders</li>
+            <li><strong>Pediatric Neurosurgery</strong></li>
+        </ul>
+    </div>
+</section>
+
+<section class="procedures section" aria-labelledby="procedures-heading">
+    <div class="container">
+        <h2 id="procedures-heading">Common Procedures</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Microsurgical Tumor Removal</h3>
+                <p>Precision-guided resections using neuronavigation and intraoperative monitoring.</p>
+            </article>
+            <article class="card">
+                <h3>Minimally Invasive Spine Surgery</h3>
+                <p>Smaller incisions, faster recovery, and improved outcomes for degenerative conditions.</p>
+            </article>
+            <article class="card">
+                <h3>Endoscopic Skull Base Surgery</h3>
+                <p>Transnasal and endoscopic approaches for select tumors and lesions.</p>
+            </article>
+            <article class="card">
+                <h3>Trauma & Emergency Neurosurgery</h3>
+                <p>24/7 critical care and operative management for head and spinal injuries.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose section" aria-labelledby="why-heading">
+    <div class="container">
+        <h2 id="why-heading">Why Choose Us</h2>
+        <ul>
+            <li>Multidisciplinary team: neurosurgeons, neurologists, rehabilitation specialists</li>
+            <li>State-of-the-art operating suites and imaging</li>
+            <li>Patient-centered recovery and rehabilitation plans</li>
+            <li>Transparent consultations and second-opinion services</li>
+        </ul>
+    </div>
+</section>
+
+<section class="testimonials section" aria-labelledby="testimonials-heading">
+    <div class="container">
+        <h2 id="testimonials-heading">Patient Stories</h2>
+        <blockquote>
+            "Compassionate care and excellent surgical skill — helped me return to normal life." — Satisfied patient, {{ slug }}
+        </blockquote>
+        <blockquote>
+            "Clear explanations, skilled team, and attentive follow-up." — Family member
+        </blockquote>
+    </div>
+</section>
+
+<section id="faq" class="faq section" aria-labelledby="faq-heading">
+    <div class="container">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <details>
+            <summary>How do I schedule a consultation?</summary>
+            <p>Call the clinic, use the appointment link, or submit the contact form below. New patients are typically seen within a few days.</p>
+        </details>
+        <details>
+            <summary>Do you offer second opinions?</summary>
+            <p>Yes. Bring imaging and reports; we provide detailed assessments and treatment options.</p>
+        </details>
+        <details>
+            <summary>Are minimally invasive options available?</summary>
+            <p>Many spine and select cranial procedures can be performed minimally invasively depending on the condition.</p>
+        </details>
+    </div>
+</section>
+
+<section id="contact" class="contact section" aria-labelledby="contact-heading">
+    <div class="container">
+        <h2 id="contact-heading">Contact & Location</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Clinic:</strong> Dr. Atmaranjan Dash, {{ slug | titlecase }}</p>
+                <p><strong>Phone:</strong> <a href="tel:+91-94399-71946">+91 94399 71946</a></p>
+                <p><strong>Email:</strong> <a href="mailto:infoneurosurgerybhb.com">infoneurosurgerybhb.com</a></p>
+                <p><strong>Hours:</strong> Mon–Sat, 9:00 AM – 6:00 PM</p>
+            </div>
+
+         
+        </div>
+
+       
+    </div>
+</section>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dr. Atmaranjan Dash, {{ slug | titlecase }} Neurosurgeon",
+    "description": "Expert neurosurgical care for brain and spine conditions in {{ slug | titlecase }}.",
+    "telephone": "+91-94399-71946",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ slug | titlecase }}",
+        "addressRegion": "Odisha",
+        "addressCountry": "IN"
+    },
+    "areaServed": "{{ slug | titlecase }} and surrounding regions",
+    "medicalSpecialty": "Neurosurgery",
+    "url": "https://www.dratmaranjandash.com/neurosurgeon/{{ slug | titlecase }}"
+}
+</script>
+
+</main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <app-appointment [doctor]="content.doctor" />
+}

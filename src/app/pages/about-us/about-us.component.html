@@ -5,127 +5,265 @@
     <section class="bg-white">
 
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-medical-950 py-20 text-white">
+<section class="bg-slate-50">
 
-    <div class="inset-0  opacity-90">
-      <img
-        src="https://dratmaranjandash.com/wp-content/uploads/2026/03/Dr_.webp"
-        class="h-full w-full object-cover"
-      />
-    </div>
+  <!-- HERO -->
 
-    <div class="container-shell mt-20 relativez-10">
 
-      <div class="grid items-center gap-12 lg:grid-cols-2">
+  <!-- HERO BRIEFING HEADER OVERLAY -->
+  <header class="relative overflow-hidden bg-slate-950 py-24 text-white lg:py-32">
+    <!-- Premium Ambient Lighting Effects -->
+    <div class="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-blue-500/10 blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 h-[600px] w-[600px] rounded-full bg-cyan-500/10 blur-3xl"></div>
+    
+    <div class="container-shell relative z-10 mx-auto max-w-6xl px-4">
+      <div class="flex flex-col items-center text-center md:items-start md:text-left gap-6 md:gap-8">
+        
+        <!-- PIONEER BADGE -->
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-400 border border-blue-500/20 shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          Medical Pioneer & First in India
+        </span>
 
-        <!-- CONTENT -->
-        <div>
-
-          <p class="text-xl font-bold uppercase tracking-[0.3em] text-medical-900">
-            Trusted Neurosurgeon
-          </p>
-
-          <h1 class="mt-5 text-5xl font-black leading-tight  text-slate-900">
-            About Dr. Atmaranjan Dash
+        <!-- IDENTITY PLATFORM -->
+        <div class="space-y-3">
+          <h1 class="text-4xl font-black tracking-tight sm:text-6xl text-white">
+            {{ content.doctor.name }}
           </h1>
-
-          <p class="mt-8  leading-9 text-slate-900">
-
-            Dr. Atmaranjan Dash is a highly experienced Neuro & Spine Surgeon based in Bhubaneswar, currently serving at CARE Hospital. He is known for his expertise in treating complex neurological and spinal conditions with precision and compassionate care.<br /><br />
-
-With advanced training in neurosurgery (MBBS, MS, MCh – Neurosurgery, AIIMS New Delhi), Dr. Dash has successfully treated numerous cases related to brain, spine, and nerve disorders. His patient-first approach, accurate diagnosis, and advanced surgical techniques make him one of the trusted neurosurgeons in Odisha.
-
+          <p class="text-xl font-bold text-blue-400 tracking-wide">
+            {{ content.doctor.title }}
           </p>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-
-            <div class="feature-chip">
-              AIIMS Delhi Alumnus
-            </div>
-
-            <div class="feature-chip">
-              CARE Hospital Consultant
-            </div>
-
-            <div class="feature-chip">
-              16+ Years Experience
-            </div>
-
-          </div>
-
-          <a
-            href="#appointment"
-            class="btn-primary mt-10 inline-flex">
-
-            Book Appointment
-
-          </a>
-
+          <p class="text-base font-medium text-slate-400 flex items-center justify-center md:justify-start gap-1.5">
+            <span>📍</span> {{ content.doctor.address }}
+          </p>
         </div>
 
-        <!-- IMAGE -->
-        <div class="relative">
-
-          <div class="absolute -inset-5 rounded-[3rem] bg-medical-400/20 blur-3xl">
-          </div>
-
-          <img
-            src="https://dratmaranjandash.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-20-at-10.21.58-AM-e1778654377268.jpeg"
-            class="relative h-80 w-auto z-10 rounded-[3rem] shadow-2xl"
-          />
-
+        <!-- FAST CONTACT CHIPS GRID -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-4 w-full">
+          <a [href]="'tel:' + content.doctor.phone" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 border border-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-200 transition duration-300 hover:border-blue-500 hover:text-white">
+            📞 {{ content.doctor.phone }}
+          </a>
+          <a [href]="'mailto:' + content.doctor.email" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 border border-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-200 transition duration-300 hover:border-blue-500 hover:text-white">
+            ✉️ {{ content.doctor.email }}
+          </a>
+         
+          
         </div>
 
       </div>
-
     </div>
+  </header>
 
+  <!-- PROFILE MATRIX CONTENT -->
+  <section class="container-shell mx-auto max-w-6xl px-4 py-16 lg:py-24">
+    <div class="grid gap-8 lg:grid-cols-3">
+      
+      <!-- LEFT PRIMARY OVERVIEW FIELD (2 COLS WIDE ON LARGE SCREENS) -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <!-- SUMMARY CARD -->
+        <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)]">
+          <h2 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">👤</span> Professional Summary
+          </h2>
+          <!-- Safe HTML rendering using InnerHTML wrapper -->
+          <div [innerHTML]="content.doctor.summary" class="mt-6 text-lg leading-relaxed text-slate-600 space-y-4"></div>
+        </article>
+
+        <!-- CURRENT ROLE & INNOVATIONS CARD -->
+        <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)] relative overflow-hidden">
+          <!-- Dynamic Glow Behind Vision Pro Mention -->
+          <div class="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-purple-500/5 blur-2xl"></div>
+          
+          <h2 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">🏥</span> Current Position & Clinical Impact
+          </h2>
+          <p class="mt-2 text-md font-bold text-slate-500">{{ content.doctor.address }}</p>
+          
+          <div class="mt-8 space-y-4">
+            @for (highlight of content.doctor.highlights; track highlight.text) {
+              <div class="flex gap-4 items-start group">
+                <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  ⚡
+                </div>
+                <p class="text-base font-medium text-slate-600 leading-relaxed pt-0.5">
+                  {{ highlight.text }}
+                </p>
+              </div>
+            }
+          </div>
+        </article>
+
+        <!-- ACADEMIC & RESEARCH CONTRIBUTIONS -->
+        <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)]">
+          <h2 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">📚</span> Academic & Research Contributions
+          </h2>
+          <div class="mt-8 grid gap-4">
+            @for (contribution of content.doctor.academicContributions; track contribution) {
+              <div class="rounded-2xl bg-slate-50 p-5 border border-slate-100 hover:border-blue-100 transition duration-300">
+                <p class="text-base font-semibold text-slate-700 leading-relaxed">
+                  {{ contribution }}
+                </p>
+              </div>
+            }
+          </div>
+        </article>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR ELEMENTS (1 COL WIDE) -->
+      <div class="space-y-8">
+        
+        <!-- PIONEERING EXPERTISE BADGES -->
+        <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)]">
+          <h2 class="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">🎯</span> Core Expertise
+          </h2>
+          <div class="mt-6 flex flex-wrap gap-2">
+            @for (skill of content.doctor.expertise; track skill) {
+              <span class="inline-flex rounded-xl bg-slate-100 px-3.5 py-2 text-xs font-bold text-slate-700 border border-slate-200/60">
+                {{ skill }}
+              </span>
+            }
+          </div>
+        </article>
+
+        <!-- EDUCATION MILESTONE -->
+        <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] relative overflow-hidden">
+          <div class="absolute right-0 bottom-0 text-7xl select-none opacity-5 font-black tracking-tighter">AIIMS</div>
+          <h2 class="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">🎓</span> Education
+          </h2>
+          <div class="mt-5 border-l-2 border-blue-500 pl-4 space-y-1">
+            <h3 class="text-lg font-black text-slate-800">M.Ch. in Neurosurgery</h3>
+            <p class="text-sm font-bold text-blue-600 uppercase tracking-wide">AIIMS, New Delhi</p>
+            <p class="text-xs font-medium text-slate-400">All India Institute of Medical Sciences</p>
+          </div>
+        </article>
+
+        <!-- PROFESSIONAL VALIDATED MEMBERSHIPS -->
+      <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)]">
+          <h2 class="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">🎖️</span> Professional Memberships
+          </h2>
+          <ul class="mt-5 space-y-3">
+            @for (membership of content.doctor.memberships; track membership) {
+              <li class="flex items-start gap-2.5 text-sm font-semibold text-slate-600 leading-snug">
+                <span class="text-emerald-500 text-xs mt-0.5">✔</span>
+                <span>{{ membership }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+
+        <!-- PERSONAL PERFORMANCE ATTRIBUTES -->
+        <article class="rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)]">
+          <h2 class="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+            <span class="text-blue-600">✨</span> Leadership Attributes
+          </h2>
+          <div class="mt-5 space-y-4">
+            @for (attr of content.doctor.attributes; track attr.title) {
+              <div class="space-y-1">
+                <h4 class="text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+                  {{ attr.title }}
+                </h4>
+                <p class="text-xs font-medium text-slate-500 pl-3 leading-relaxed">
+                  {{ attr.desc }}
+                </p>
+              </div>
+            }
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <!-- SPECIALIZATIONS -->
-  <section class="py-20">
 
-    <div class="container-shell">
+<!-- SPECIALIZATIONS -->
+<section class="relative overflow-hidden bg-slate-50 py-24 lg:py-32">
+  <!-- Subtle Background Gradients for Depth -->
+  <div class="absolute -top-40 right-0 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-blue-50/40 to-cyan-50/20 blur-3xl"></div>
+  <div class="absolute -bottom-40 left-0 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-indigo-50/30 to-blue-50/10 blur-3xl"></div>
 
-      <div class="text-center">
-
-        <p class="section-eyebrow">
-          Specializations
-        </p>
-
-        <h2 class="section-title">
-          Expert Neurological Care
-        </h2>
-
+  <div class="container-shell relative z-10 mx-auto max-w-7xl px-4">
+    
+    <!-- Section Header -->
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600 border border-blue-100/80">
+        Clinical Expertise
+      </span>
+      <h2 class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
+        Expert Neurological Care
+      </h2>
+      <div class="mt-6 flex justify-center gap-1.5">
+        <div class="h-1.5 w-10 rounded-full bg-blue-600"></div>
+        <div class="h-1.5 w-2 rounded-full bg-blue-400/60"></div>
       </div>
+    </div>
 
-      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <!-- Centered Card Grid Layout -->
+    <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      @for (item of specializations; track item) {
+        <article class="group relative flex flex-col items-center justify-center text-center overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-blue-100/70 hover:shadow-[0_20px_50px_rgba(59,130,246,0.08)]">
+          
+          <!-- Subtle background glow behind the icon on card hover -->
+          <div class="absolute inset-0 z-0 bg-gradient-to-b from-blue-50/0 to-blue-50/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
-        @for (item of specializations; track item) {
+          <div class="relative z-10 flex flex-col items-center">
+            
+            <!-- Premium Dimensional Icon Container Wrapper -->
+            <div class="relative flex h-20 w-20 items-center justify-center rounded-3xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-md
+              {{ item.toLowerCase().includes('spine') ? 'bg-emerald-50 text-emerald-600 shadow-emerald-100/40' : 
+                 item.toLowerCase().includes('brain') || item.toLowerCase().includes('neuro') ? 'bg-blue-50 text-blue-600 shadow-blue-100/40' : 
+                 item.toLowerCase().includes('stroke') || item.toLowerCase().includes('vascular') ? 'bg-rose-50 text-rose-600 shadow-rose-100/40' : 
+                 'bg-indigo-50 text-indigo-600 shadow-indigo-100/40' }}">
+              
+              <!-- Layered Shadow Element inside the icon container itself -->
+              <div class="absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-current mix-blend-overlay"></div>
 
-          <article
-            class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-
-            <div
-              class="grid h-16 w-16 place-items-center rounded-2xl bg-medical-50 text-3xl">
-
-              🧠
-
+              <!-- High-End Fluid Medical Vector Icons -->
+              @if (item.toLowerCase().includes('spine')) {
+                <!-- Premium Multi-Node Alignment Segment -->
+                <svg class="relative z-10 h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M8 5h8M7 10h10M6 15h12M8 19h8" />
+                  <circle cx="12" cy="5" r="1" fill="currentColor" />
+                  <circle cx="12" cy="10" r="1" fill="currentColor" />
+                  <circle cx="12" cy="15" r="1" fill="currentColor" />
+                  <circle cx="12" cy="19" r="1" fill="currentColor" />
+                </svg>
+              } @else if (item.toLowerCase().includes('brain') || item.toLowerCase().includes('neuro')) {
+                <!-- Premium High-Density Neural System Matrix -->
+                <svg class="relative z-10 h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12M6 12h12M7.5 7.5l9 9M7.5 16.5l9-9" />
+                </svg>
+              } @else if (item.toLowerCase().includes('stroke') || item.toLowerCase().includes('vascular')) {
+                <!-- Premium Cardiovascular Dynamic Velocity Vector -->
+                <svg class="relative z-10 h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L3 14h9v8l10-12h-9V2z" />
+                </svg>
+              } @else {
+                <!-- Premium Multi-Layer Clinical Shield Component -->
+                <svg class="relative z-10 h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              }
             </div>
 
-            <h3 class="mt-6 text-xl font-black text-slate-900">
+            <!-- Premium Text Typography Structure -->
+            <h3 class="mt-8 text-xl font-extrabold tracking-tight text-slate-800 transition-colors duration-300 group-hover:text-blue-600">
               {{ item }}
             </h3>
 
-          </article>
-
-        }
-
-      </div>
-
+          </div>
+        </article>
+      }
     </div>
 
-  </section>
+  </div>
+</section>
 
   <!-- EDUCATION -->
   <section class="bg-slate-50 py-20">
@@ -235,15 +373,11 @@ With advanced training in neurosurgery (MBBS, MS, MCh – Neurosurgery, AIIMS Ne
   </section>
 
 </section>
+</section>
+
+
+
      </main>
   <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
-  <a
-    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-lift transition hover:-translate-y-1"
-    [href]="'https://wa.me/' + content.doctor.whatsapp + '?text=Hello%20Doctor%2C%20I%20want%20to%20book%20an%20appointment%20for%20consultation'"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp"
-  >
-    WA
-  </a>
-}
+   <app-appointment [doctor]="content.doctor" />
+    }

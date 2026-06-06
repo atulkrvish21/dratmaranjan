@@ -1,1 +1,188 @@
-<p>faq works!</p>
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+   
+    <section class="bg-white">
+
+<section class="bg-slate-50">
+
+  <!-- HERO -->
+
+  <section class="relative overflow-hidden bg-slate-950 py-32 text-white">
+  <!-- Unsplash Background Image with Deep Overlay -->
+  <div class="absolute inset-0 z-0">
+   
+    <!-- Solid dark gradient to guarantee text contrast -->
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-slate-950/50"></div>
+  </div>
+
+  <!-- Decorative Light Glow -->
+  <div class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+  <!-- Content Container -->
+  <div class="container-shell relative z-10 mx-auto max-w-4xl px-4 text-center">
+    
+    <!-- Accent Badge -->
+    <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-800/80 px-4 py-1.5 text-sm font-semibold text-cyan-400 border border-slate-700/50 shadow-sm">
+      <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      FAQ
+    </span>
+
+    <!-- Main Title -->
+    <h1 class="mt-6 text-5xl font-black tracking-tight sm:text-6xl text-white">
+      Frequently Asked Questions
+    </h1>
+
+    <!-- Subtitle Description -->
+    <p class="mx-auto mt-6 max-w-xl text-lg font-medium leading-relaxed text-slate-300">
+        Find answers to common questions about our neurosurgery services, patient care, and clinic policies.
+    </p>
+
+    <!-- Bottom Decorative Divider -->
+    <div class="mt-10 flex justify-center gap-1">
+      <div class="h-1 w-12 rounded-full bg-cyan-500"></div>
+      <div class="h-1 w-2 rounded-full bg-cyan-500/50"></div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- SEARCH -->
+
+  <section class="py-12">
+
+    <div class="container-shell">
+
+      <div class="mx-auto max-w-3xl">
+
+        <input
+          [(ngModel)]="searchTerm"
+          type="text"
+          placeholder="Search your question..."
+          class="w-full rounded-[1.5rem] border border-slate-200 bg-white px-6 py-5 text-lg shadow-xl outline-none focus:border-medical-500"
+        />
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="pb-20">
+
+    <div class="container-shell">
+
+      <div
+        class="mx-auto max-w-5xl space-y-5">
+
+        @for (item of filteredFaqs; track item.question) {
+
+        <article
+          class="overflow-hidden rounded-[1rem] bg-white shadow-[0_15px_50px_rgba(15,23,42,.06)]">
+
+          <button
+            class="flex w-full items-center justify-between px-7 p-3 text-left"
+            (click)="toggle(item)">
+
+            <div>
+
+             
+              <h3
+                class="text-base font-black text-slate-900">
+
+                {{ item.question }}
+
+              </h3>
+
+            </div>
+
+            <div
+              class="grid h-12 w-12 place-items-center rounded-full bg-medical-50 text-xl font-black text-medical-700">
+
+              {{ item.open ? '−' : '+' }}
+
+            </div>
+
+          </button>
+
+          @if (item.open) {
+
+          <div
+            class="border-t border-slate-100 px-7 pb-3 pt-2">
+
+            <p
+              class="leading-8 text-slate-600">
+
+              {{ item.answer }}
+
+            </p>
+
+          </div>
+
+          }
+
+        </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="pb-24">
+
+    <div class="container-shell">
+
+      <div
+        class="rounded-[2rem] bg-gradient-to-r from-medical-700 to-medical-900 p-10 text-center text-white shadow-2xl">
+
+        <h2
+          class="text-3xl font-black">
+
+          Still Have Questions?
+
+        </h2>
+
+        <p
+          class="mx-auto mt-4 max-w-2xl text-medical-100">
+
+          Contact our team for personalized guidance and expert consultation.
+
+        </p>
+
+        <div
+          class="mt-8 flex flex-wrap justify-center gap-4">
+
+          <a
+            href="/contact-us"
+            class="rounded-2xl bg-white px-8 py-4 font-bold text-medical-800">
+
+            Contact Us
+
+          </a>
+
+         
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+
+
+
+</section>
+     </main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <app-appointment [doctor]="content.doctor" />
+}
+

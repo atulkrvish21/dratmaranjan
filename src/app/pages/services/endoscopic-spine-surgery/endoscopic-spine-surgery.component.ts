@@ -2,11 +2,12 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ClinicContentService } from 'src/app/services/clinic-content.service';
-
+import { AppointmentComponent } from 'src/app/sections/appointment/appointment.component';
 import { FooterComponent } from 'src/app/sections/footer/footer.component';
 
 import { NavbarComponent } from 'src/app/sections/navbar/navbar.component';
 import { ScrollRevealDirective } from 'src/app/shared/scroll-reveal/scroll-reveal.directive';
+import { appConfig } from 'src/app/app.config';
 
 @Component({
   selector: 'app-endoscopic-spine-surgery',
@@ -14,6 +15,7 @@ imports: [
     AsyncPipe,
     NavbarComponent,
     FooterComponent,
+    AppointmentComponent,
     ScrollRevealDirective
   ],
   templateUrl: './endoscopic-spine-surgery.component.html',
@@ -38,43 +40,42 @@ private readonly clinicContent = inject(ClinicContentService);
     'Percutaneous Pedicle Screw Fixation',
     'Oblique Lateral Lumbar Interbody Fusion'
   ];
-
-  benefits = [
+benefits = [
     {
-      icon: '💪',
-      title: 'Less Muscle Damage',
+      icon: '📹',
+      title: '8mm Incision',
       description:
-        'Smaller incisions preserve surrounding muscles and tissues.'
+        'Smaller than a keyhole with no muscle cutting and typically no stitches.'
     },
     {
-      icon: '⚡',
-      title: 'Faster Recovery',
+      icon: '🏃',
+      title: 'Same-Day Mobility',
       description:
-        'Most patients walk within 4-6 hours and return home quickly.'
+        'Patients often walk within 2-4 hours after surgery.'
+    },
+    {
+      icon: '💊',
+      title: 'Local Anesthesia',
+      description:
+        'Can be performed under local anesthesia for selected high-risk patients.'
     },
     {
       icon: '🩸',
-      title: 'Less Blood Loss',
+      title: 'Minimal Blood Loss',
       description:
-        'Reduced operative trauma means minimal blood loss during surgery.'
-    },
-    {
-      icon: '😌',
-      title: 'Less Pain',
-      description:
-        'Significantly reduced post-operative pain and smaller scars.'
+        'Virtually bloodless procedure with minimal tissue disruption.'
     },
     {
       icon: '🏠',
-      title: 'Shorter Hospital Stay',
+      title: 'Day-Care Procedure',
       description:
-        'Typically 1-2 days compared to traditional open surgery.'
+        'Most patients are discharged within 24 hours.'
     },
     {
       icon: '🎯',
-      title: 'High Precision',
+      title: 'Direct Visualization',
       description:
-        'Endoscopic visualization provides enhanced surgical accuracy.'
+        'HD endoscopic camera provides an excellent view of the surgical area.'
     }
   ];
 }

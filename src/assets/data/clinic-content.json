@@ -6,7 +6,7 @@
   },
   {
     "label": "About",
-    "href": "about-us"
+    "href": "/about-us"
   },
   {
     "label": "Services",
@@ -14,35 +14,35 @@
     "children": [
       {
         "label": "Brain Tumor Surgery",
-        "href": "brain-tumor-surgery"
+        "href": "/brain-tumor-surgery"
       },
       {
         "label": "Minimally Invasive Spine Surgery",
-        "href": "minimally-invasive-spine-surgery"
+        "href": "/minimally-invasive-spine-surgery"
       },
       {
         "label": "Endoscopic Spine Surgery",
-        "href": "endoscopic-spine-surgery"
+        "href": "/endoscopic-spine-surgery"
       },
       {
         "label": "Stroke Management",
-        "href": "stroke-management"
+        "href": "/stroke-management"
       },
       {
         "label": "Trauma & Emergency Neurosurgery",
-        "href": "trauma-emergency-neurosurgery"
+        "href": "/trauma-emergency-neurosurgery"
       },
       {
         "label": "Spine Fixation & Decompression",
-        "href": "spine-fixation-decompression"
+        "href": "/spine-fixation-decompression"
       },
       {
         "label": "Chronic Back Pain Treatment",
-        "href": "chronic-back-pain-treatment"
+        "href": "/chronic-back-pain-treatment"
       },
       {
         "label": "Peripheral Nerve Surgery",
-        "href": "peripheral-nerve-surgery"
+        "href": "/peripheral-nerve-surgery"
       }
     ]
   },
@@ -52,38 +52,40 @@
     "children": [
       {
         "label": "Photos",
-        "href": "photos"
+        "href": "/photos"
       },
       {
         "label": "Videos",
-        "href": "videos"
+        "href": "/videos"
       },
       {
-        "label": "Awards & Events",
-        "href": "awards"
+        "label": "Blog",
+        "href": "/blog"
       }
     ]
   },
   {
     "label": "Q&A",
-    "href": "faq"
+    "href": "/faq"
   },
   {
     "label": "Contact",
-    "href": "contact-us"
+    "href": "/contact-us"
   }
 ],
   "doctor": {
     "name": "Dr. Atmaranjan Dash",
     "title": "MBBS | MS | MCh",
-    "tagline": "(Neurosurgery - AlIMS New Delhi)",
-    "summary": "Dr. Atmaranjan Dash is a highly experienced Neuro & Spine Surgeon based in Bhubaneswar, currently serving at CARE Hospital. He is known for his expertise in treating complex neurological and spinal conditions with precision and compassionate care. With advanced training in neurosurgery, Dr. Dash has successfully treated numerous cases related to brain, spine, and nerve disorders.",
+    "tagline": "Chief Consultant, Neurosurgery,<br/> CARE Hospital, Bhubaneswar",
+    "summary": "Dr. Atmaranjan Dash is a distinguished and pioneering neurosurgeon based in Bhubaneswar, India. Renowned as the first neurosurgeon in India to perform unilateral bi-portal endoscopy, he has consistently pushed the boundaries of medical innovation. With extensive expertise in endoscopic spine surgery, Dr. Dash has significantly contributed to the field of neurosurgery through his clinical practice, teaching, and research. He is an accomplished academician with numerous national and international publications and a respected faculty member in premier neurosurgical societies.",
     "image": "assets/images/site/doctor-main.jpeg",
     "logo": "assets/images/site/logo.png",
     "phone": "+91 9439971946",
     "whatsapp": "919439971946",
     "email": "info@dratmaranjandash.com",
     "address": "CARE Hospital, Bhubaneswar",
+    "website": "dratmaranjandash.com",
+    "linkedin": "/in/dratmaranjandash",
     "qualifications": [
       "MBBS from MKCG Medical College, Berhampur",
       "MS - General Surgery from SCB Medical College, Cuttack",
@@ -105,6 +107,43 @@
       "Minimally Invasive Techniques",
       "Brain Aneurysm & Endoscopic Surgery",
       "High-Risk Case Specialist"
+    ],
+    "highlights": [
+      { "text": "Spearheads the neurosurgery department with a focus on minimally invasive and endoscopic procedures." },
+      { "text": "Director of the International UBE Training Program, mentoring surgeons in advanced techniques." },
+      { "text": "Innovator of India’s first augmented reality endoscopic spine surgery using Apple Vision Pro." },
+      { "text": "Pioneered the first unilateral bi-portal endoscopy (UBE) in India, revolutionizing spine surgery." },
+      { "text": "Extensive experience in complex brain tumor resections, cerebrovascular surgeries, and spinal deformity corrections." },
+      { "text": "Renowned for expertise in revision spine surgeries and managing failed back syndrome cases." },
+      { "text": "Active contributor to neurosurgical research with numerous publications in top-tier journals." },
+      { "text": "Regularly invited as a speaker and faculty at national and international neurosurgery conferences." }
+    ],
+    
+    "expertise": [
+      "Unilateral Biportal Endoscopy (UBE)",
+      "Augmented Reality in Neurosurgery",
+      "Minimally Invasive Spine Surgery",
+      "Endoscopic Spine Surgery"
+    ],
+    
+    "memberships": [
+      "Neurospine Society of India (NSI)",
+      "ASICON (Association of Surgeons of India)",
+      "ISUBI (International Society of Unilateral Biportal Endoscopy)",
+      "Endoscopic Spine Fellowship Institute (ESFI)",
+      "President, Radical Association of Spine Endoscopic Society"
+    ],
+    
+    "academicContributions": [
+      "Prime Faculty Member in Endoscopic Society of India, NSI, and ESFI.",
+      "Conducts workshops and training sessions on endoscopic and minimally invasive spine surgery.",
+      "Published extensively in leading national and international journals."
+    ],
+    
+    "attributes": [
+      { "title": "Innovative", "desc": "Forward-thinking approach in advanced complex surgical techniques." },
+      { "title": "Mentorship", "desc": "Committed to training global surgeons and advancing neurosurgery." },
+      { "title": "Patient-Focused", "desc": "Collaborative team leader driven by patient care excellence." }
     ]
   },
   "services": [
@@ -152,5 +191,73 @@
     { "question": "Is spine surgery always necessary for back pain?", "answer": "No. Surgery is recommended only when conservative treatments fail, there is progressive nerve damage or weakness, severe pain affects daily life, or there is loss of bladder or bowel control. Dr. Dash explores non-surgical options first." },
     { "question": "How can I book an appointment?", "answer": "You can book an appointment through WhatsApp, call 9439971946, or visit CARE Hospital, Bhubaneswar. Same-day appointments are available for emergency cases." },
     { "question": "What are the signs of a stroke?", "answer": "Remember FAST: Face drooping, Arm weakness, Speech difficulty, and Time to call for immediate medical attention. Early treatment saves lives." }
-  ]
+  ],
+  "blogPosts": [
+{
+"id": 3,
+"slug": "neurological-deficit-urgent-spine-surgery",
+"title": "Neurological Deficit: When Immediate Spine Surgery Becomes Necessary",
+"excerpt": "Progressive weakness, foot drop, urinary retention, and spinal cord compression may require urgent surgical treatment to prevent permanent neurological damage.",
+"image": "assets/images/blog/neuro.png",
+"category": "Neurological Emergencies",
+"author": "Dr. Atmaranjan Dash",
+"date": "06 June 2026",
+"readTime": "5 min read",
+"content": "<section class='relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-20'><div class='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.15),transparent_40%)]'></div><div class='container mx-auto max-w-6xl px-6 relative z-10'><div class='text-center mb-16'><span class='inline-flex items-center rounded-full bg-blue-500/20 border border-blue-400/30 px-4 py-2 text-sm font-medium text-blue-300'>Emergency Spine Care</span><h1 class='mt-6 text-4xl md:text-6xl font-bold text-black leading-tight'>Neurological Deficits:<span class='text-blue-600'>When Spine Surgery Becomes an Emergency</span></h1><p class='mt-8 max-w-4xl mx-auto text-lg text-slate-800 leading-relaxed'>Neurological deficits are among the most critical indications for urgent spine surgery. When nerves or the spinal cord become compressed, delayed treatment can result in permanent weakness, loss of function, or irreversible nerve damage.</p></div><div class='bg-white rounded-3xl shadow-2xl overflow-hidden'><div class='p-8 md:p-12'><div class='prose prose-lg max-w-none'><h2 class='text-3xl font-bold text-slate-900 mb-6'>Warning Signs You Should Never Ignore</h2><p class='text-slate-600 mb-8'>Certain symptoms indicate that the spinal cord or nerve roots may be under significant pressure and require immediate medical attention.</p><div class='grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10'><div class='rounded-2xl border border-red-100 bg-red-50 p-5'><h3 class='font-semibold text-red-700'>Progressive Weakness</h3><p class='text-sm text-slate-600 mt-2'>Weakness in arms or legs that worsens over time.</p></div><div class='rounded-2xl border border-red-100 bg-red-50 p-5'><h3 class='font-semibold text-red-700'>Foot Drop</h3><p class='text-sm text-slate-600 mt-2'>Difficulty lifting the front part of the foot.</p></div><div class='rounded-2xl border border-red-100 bg-red-50 p-5'><h3 class='font-semibold text-red-700'>Quadriparesis</h3><p class='text-sm text-slate-600 mt-2'>Weakness affecting all four limbs.</p></div><div class='rounded-2xl border border-red-100 bg-red-50 p-5'><h3 class='font-semibold text-red-700'>Paraparesis</h3><p class='text-sm text-slate-600 mt-2'>Weakness affecting both lower limbs.</p></div><div class='rounded-2xl border border-red-100 bg-red-50 p-5'><h3 class='font-semibold text-red-700'>Urinary Retention</h3><p class='text-sm text-slate-600 mt-2'>Loss of bladder control or difficulty urinating.</p></div><div class='rounded-2xl border border-red-100 bg-red-50 p-5'><h3 class='font-semibold text-red-700'>Saddle Anesthesia</h3><p class='text-sm text-slate-600 mt-2'>Numbness around the groin and inner thighs.</p></div></div><div class='rounded-2xl border-l-4 border-red-500 bg-red-50 p-6 mb-12'><h3 class='text-lg font-bold text-red-700 mb-2'>Seek Immediate Medical Attention</h3><p class='text-slate-700'>If any of these symptoms develop or worsen, urgent evaluation by a spine specialist is strongly recommended.</p></div><h2 class='text-3xl font-bold text-slate-900 mb-8'>Conditions That Often Require Urgent Surgery</h2><div class='space-y-6 mb-12'><article class='rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition'><h3 class='text-xl font-semibold text-slate-900 mb-3'>Cervical Myelopathy</h3><p class='text-slate-600'>Compression of the spinal cord in the neck region can result in balance problems, hand clumsiness, weakness, and progressive disability.</p></article><article class='rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition'><h3 class='text-xl font-semibold text-slate-900 mb-3'>Massive Lumbar Disc Herniation</h3><p class='text-slate-600'>Large disc prolapse causing severe nerve compression and potential cauda equina syndrome.</p></article><article class='rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition'><h3 class='text-xl font-semibold text-slate-900 mb-3'>Spinal Tumors</h3><p class='text-slate-600'>Tumors may compress the spinal cord or nerves and cause progressive neurological deficits.</p></article><article class='rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition'><h3 class='text-xl font-semibold text-slate-900 mb-3'>Epidural Hematoma</h3><p class='text-slate-600'>Bleeding around the spinal cord requiring urgent decompression.</p></article><article class='rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition'><h3 class='text-xl font-semibold text-slate-900 mb-3'>Epidural Abscess</h3><p class='text-slate-600'>Spinal infection causing pus collection and risk of paralysis.</p></article></div><div class='rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 mb-12'><h2 class='text-2xl font-bold mb-4'>How Quickly Should Surgery Be Performed?</h2><p class='leading-relaxed'>Depending on the underlying cause and severity of neurological impairment, surgery may be required immediately or within <strong>24–48 hours</strong> to maximize neurological recovery and prevent permanent disability.</p></div><div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-8'><h2 class='text-2xl font-bold text-emerald-800 mb-4'>Key Takeaway</h2><p class='text-slate-700 leading-relaxed'>Neurological deficits should never be ignored. Progressive weakness, bladder dysfunction, saddle anesthesia, or difficulty walking may indicate serious spinal cord or nerve compression. Early diagnosis and timely surgery can significantly improve outcomes and prevent permanent neurological damage.</p></div></div></div></div></div></section>"
+},
+
+{
+"id": 4,
+"slug": "intractable-pain-after-conservative-treatment",
+"title": "Persistent Spine Pain Despite Treatment: When Surgery May Help",
+"excerpt": "Discover when severe neck or back pain that does not respond to medications, physiotherapy, or injections may require surgical intervention.",
+"image": "assets/images/blog/spine-surgery.png",
+"category": "Spine Surgery",
+"author": "Dr. Atmaranjan Dash",
+"date": "06 June 2026",
+"readTime": "5 min read",
+  "content":"<section class=\"relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-20\"><div class=\"absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.15),transparent_40%)]\"></div><div class=\"container mx-auto max-w-6xl px-6 relative z-10\"><div class=\"text-center mb-16\"><span class=\"inline-flex items-center rounded-full bg-blue-500/20 border border-blue-400/30 px-4 py-2 text-sm font-medium text-blue-300\">Modern Spine Care</span><h1 class=\"mt-6 text-4xl md:text-6xl font-bold text-black leading-tight\">Finding Relief: <span class=\"text-blue-600\">When Is It Time to Consider Spine Surgery?</span></h1><p class=\"mt-8 max-w-4xl mx-auto text-lg text-slate-800 leading-relaxed\">Most people dealing with back or neck pain improve with conservative treatments such as physical therapy, medications, lifestyle modifications, and rest. However, when symptoms persist despite these measures, spine surgery may become an important option for long-term relief and improved quality of life.</p></div><div class=\"bg-white rounded-3xl shadow-2xl overflow-hidden\"><div class=\"p-8 md:p-12\"><div class=\"prose prose-lg max-w-none\"><h2 class=\"text-3xl font-bold text-slate-900 mb-6\">When Is Spine Surgery Considered?</h2><p class=\"text-slate-600 mb-8\">Spine surgery is rarely the first treatment option. Specialists generally recommend surgery only when specific clinical criteria are met and conservative treatment has failed to provide adequate relief.</p><div class=\"grid md:grid-cols-2 gap-5 mb-10\"><div class=\"rounded-2xl border border-blue-100 bg-blue-50 p-5\"><h3 class=\"font-semibold text-blue-700\">Duration of Symptoms</h3><p class=\"text-sm text-slate-600 mt-2\">Persistent symptoms lasting 6–12 weeks or longer without meaningful improvement.</p></div><div class=\"rounded-2xl border border-blue-100 bg-blue-50 p-5\"><h3 class=\"font-semibold text-blue-700\">Severe Nerve Pain</h3><p class=\"text-sm text-slate-600 mt-2\">Intense shooting pain radiating down the arms or legs due to nerve compression.</p></div><div class=\"rounded-2xl border border-blue-100 bg-blue-50 p-5\"><h3 class=\"font-semibold text-blue-700\">Lifestyle Limitation</h3><p class=\"text-sm text-slate-600 mt-2\">Difficulty performing daily activities, working, exercising, or sleeping comfortably.</p></div><div class=\"rounded-2xl border border-blue-100 bg-blue-50 p-5\"><h3 class=\"font-semibold text-blue-700\">Confirmed Diagnosis</h3><p class=\"text-sm text-slate-600 mt-2\">MRI or advanced imaging reveals structural abnormalities matching clinical symptoms.</p></div></div><div class=\"rounded-2xl border-l-4 border-amber-500 bg-amber-50 p-6 mb-12\"><h3 class=\"text-lg font-bold text-amber-700 mb-2\">Surgery Is Not Always the First Choice</h3><p class=\"text-slate-700\">Most spine specialists recommend exhausting non-surgical treatments before considering surgery unless there is a neurological emergency or severe spinal instability.</p></div><h2 class=\"text-3xl font-bold text-slate-900 mb-8\">Common Conditions That May Require Surgery</h2><p class=\"text-slate-600 mb-8\">In many cases, surgery becomes necessary because structural problems continue to place pressure on spinal nerves despite conservative care.</p><div class=\"space-y-6 mb-12\"><article class=\"rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition\"><h3 class=\"text-xl font-semibold text-slate-900 mb-3\">Lumbar Disc Herniation</h3><p class=\"text-slate-600\">A spinal disc bulges or ruptures and compresses nearby nerve roots, leading to sciatica, weakness, and persistent pain.</p></article><article class=\"rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition\"><h3 class=\"text-xl font-semibold text-slate-900 mb-3\">Foraminal Stenosis</h3><p class=\"text-slate-600\">Narrowing of the nerve exit channels causes ongoing nerve irritation, numbness, weakness, and radiating pain.</p></article><article class=\"rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition\"><h3 class=\"text-xl font-semibold text-slate-900 mb-3\">Lateral Recess Stenosis</h3><p class=\"text-slate-600\">Compression occurs where nerves travel before exiting the spinal canal, resulting in chronic pain and neurological symptoms.</p></article></div><div class=\"rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 mb-12\"><h2 class=\"text-2xl font-bold mb-4\">The Benefits of Modern Spine Surgery</h2><p class=\"leading-relaxed mb-6\">Today's spine surgery techniques are significantly more advanced than traditional open procedures. Many patients can now benefit from minimally invasive and endoscopic approaches that reduce tissue damage and accelerate recovery.</p><div class=\"grid md:grid-cols-3 gap-5\"><div class=\"bg-white/10 rounded-2xl p-5\"><h3 class=\"font-semibold mb-2\">Targeted Relief</h3><p class=\"text-sm text-blue-100\">Precise decompression of affected nerves with minimal disruption.</p></div><div class=\"bg-white/10 rounded-2xl p-5\"><h3 class=\"font-semibold mb-2\">Smaller Incisions</h3><p class=\"text-sm text-blue-100\">Reduced muscle injury, less blood loss, and lower postoperative discomfort.</p></div><div class=\"bg-white/10 rounded-2xl p-5\"><h3 class=\"font-semibold mb-2\">Faster Recovery</h3><p class=\"text-sm text-blue-100\">Earlier mobility, shorter hospital stays, and quicker return to normal activities.</p></div></div></div><div class=\"rounded-3xl border border-emerald-200 bg-emerald-50 p-8\"><h2 class=\"text-2xl font-bold text-emerald-800 mb-4\">Key Takeaway</h2><p class=\"text-slate-700 leading-relaxed\">If you have been struggling with persistent back or neck pain for several weeks or months despite appropriate treatment, it may be time to consult a spine specialist. Modern minimally invasive and endoscopic spine procedures can provide effective relief while helping patients recover faster and return to their daily lives with confidence.</p></div></div></div></div></div></section>"
+
+},
+
+{
+"id": 5,
+"slug": "spinal-instability-and-fusion-surgery",
+"title": "Understanding Spinal Instability and When Fusion Surgery Is Needed",
+"excerpt": "Spinal instability can lead to pain, deformity, and neurological symptoms. Learn when surgical stabilization becomes necessary.",
+"image": "assets/images/blog/spinal-instability.png",
+"category": "Spine Surgery",
+"author": "Dr. Atmaranjan Dash",
+"date": "06 June 2026",
+"readTime": "6 min read",
+"content": "<h2>Introduction</h2><p>The spine must maintain proper alignment and stability during movement. When stability is lost, surgery may be required.</p><h2>Causes of Spinal Instability</h2><ul><li>Spondylolisthesis</li><li>Traumatic fractures</li><li>Degenerative deformities</li><li>Post-laminectomy instability</li></ul><h2>Treatment Options</h2><ul><li>Spinal fusion surgery</li><li>Instrumentation using rods and screws</li></ul><h2>Goals of Surgery</h2><p>The primary goals are to restore stability, reduce pain, and prevent further neurological deterioration.</p>"
+},
+
+{
+"id": 6,
+"slug": "spinal-cord-compression-and-myelopathy",
+"title": "Spinal Cord Compression and Myelopathy: Why Early Surgery Matters",
+"excerpt": "Cervical and thoracic myelopathy can cause progressive disability. Early diagnosis and surgical treatment often provide the best outcomes.",
+"image": "assets/images/blog/spinal-cord.png",
+"category": "Spine Surgery",
+"author": "Dr. Atmaranjan Dash",
+"date": "06 June 2026",
+"readTime": "6 min read",
+"content": "<h2>Introduction</h2><p>Spinal cord compression can lead to progressive neurological dysfunction if not treated promptly.</p><h2>Symptoms of Myelopathy</h2><ul><li>Hand clumsiness</li><li>Difficulty walking</li><li>Balance problems</li><li>Hyperreflexia</li><li>Positive Hoffmann sign</li><li>Positive Babinski sign</li></ul><h2>Common Causes</h2><ul><li>Cervical canal stenosis</li><li>OPLL</li><li>Thoracic disc herniation</li></ul><h2>Importance of Early Surgery</h2><p>Timely decompression helps prevent irreversible spinal cord damage and improves neurological recovery.</p>"
+},
+
+{
+"id": 7,
+"slug": "spinal-tumors-infections-and-structural-lesions",
+"title": "Spinal Tumors, Infections, and Structural Lesions Requiring Surgery",
+"excerpt": "Certain spinal conditions almost always require surgery due to compression of nerves or the spinal cord.",
+"image": "assets/images/site/spinal-tumors-lesions.png",
+"category": "Spine Surgery",
+"author": "Dr. Atmaranjan Dash",
+"date": "06 June 2026",
+"readTime": "6 min read",
+"content": "<h2>Introduction</h2><p>Some structural spinal abnormalities require surgical removal because they can threaten neurological function and spinal stability.</p><h2>Conditions Often Requiring Surgery</h2><ul><li>Intradural tumors</li><li>Extradural tumors</li><li>Spinal infections with compression</li><li>Severe spinal deformities</li><li>Recurrent disc prolapse</li></ul><h2>Why Surgery Is Recommended</h2><p>These conditions may compress nerves, the spinal cord, or destabilize the spine, making surgical intervention the most effective treatment.</p><h2>Expected Outcomes</h2><p>Early diagnosis and treatment can improve outcomes and help preserve neurological function.</p>"
+}
+]
+
 }

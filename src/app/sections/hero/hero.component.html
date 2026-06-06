@@ -5,9 +5,13 @@
         <span class="h-2.5 w-2.5 rounded-full bg-medical-500"></span>
         Personalized Care for Advanced Neurosurgery
       </div>
-      <h1 class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">{{ doctor.name }}</h1>
+      <h1 class="text-4xl font-extrabold leading-tight text-ink sm:text-3xl lg:text-5xl">{{ doctor.name }}</h1>
       <p class="mt-5 max-w-2xl text-xl font-extrabold leading-8 text-medical-900">{{ doctor.title }}</p>
-      <p class="mt-2 max-w-2xl text-lg font-bold leading-8 text-medical-800">{{ doctor.tagline }}</p>
+    
+      <div>
+  <!-- Change this from {{ description }} to innerHTML -->
+  <p [innerHTML]="doctor.tagline" class="mt-4 text-lg text-slate-600"></p>
+</div>
 
       <div class="mt-7 flex flex-wrap gap-3">
         @for (item of heroHighlights; track item) {
@@ -19,8 +23,13 @@
       </div>
 
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-        <a class="btn-primary" href="#appointment">Book An Appointment</a>
-        <a class="btn-secondary" [href]="'tel:' + doctor.phone">Call Clinic</a>
+      <button 
+  type="button" 
+  (click)="triggerGlobalPopup($event)" 
+  class="bg-medical-600 hover:bg-medical-700 text-white text-sm font-bold rounded-full px-4 py-2 cursor-pointer shadow-md transition-all active:scale-95 duration-200">
+  Make an Appointment
+</button>
+
       </div>
     </div>
 

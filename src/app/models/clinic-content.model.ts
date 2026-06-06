@@ -9,6 +9,29 @@ export interface NavLink {
   children?: NavChildLink[];
 }
 
+export interface blogPosts {
+
+  id: number;
+
+  slug: string;
+
+  title: string;
+
+  excerpt: string;
+
+  image: string;
+
+  content: string;
+
+  category: string;
+
+  author: string;
+
+  date: string;
+
+  readTime: string;
+
+}
 export interface DoctorProfile {
   name: string;
   title: string;
@@ -20,9 +43,24 @@ export interface DoctorProfile {
   whatsapp: string;
   email: string;
   address: string;
+  linkedin: string;
+  website: string;
   qualifications: string[];
   certifications: string[];
   experienceHighlights: string[];
+  highlights: highlights[];
+  expertise: string[];
+  memberships: string[];
+  academicContributions: string[];
+  attributes: attributes[];
+}
+
+export interface highlights {
+  text: string;
+}
+export interface attributes {
+  title: string;
+  desc: string;
 }
 
 export interface CardItem {
@@ -59,4 +97,5 @@ export interface ClinicContent {
   trust: CardItem[];
   testimonials: Testimonial[];
   faqs: FaqItem[];
+  blogPosts: blogPosts[];
 }

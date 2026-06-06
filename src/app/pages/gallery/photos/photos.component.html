@@ -1,1 +1,248 @@
-<p>photos works!</p>
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+   
+    <section class="bg-white">
+
+<section class="bg-slate-50">
+
+  <!-- HERO -->
+<section class="relative overflow-hidden bg-slate-950 py-32 text-white">
+  <!-- Unsplash Background Image with Deep Overlay -->
+  <div class="absolute inset-0 z-0">
+   
+    <!-- Solid dark gradient to guarantee text contrast -->
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-slate-950/50"></div>
+  </div>
+
+  <!-- Decorative Light Glow -->
+  <div class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+  <!-- Content Container -->
+  <div class="container-shell relative z-10 mx-auto max-w-4xl px-4 text-center">
+    
+    <!-- Accent Badge -->
+    <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-800/80 px-4 py-1.5 text-sm font-semibold text-cyan-400 border border-slate-700/50 shadow-sm">
+      <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      Visual Insights
+    </span>
+
+    <!-- Main Title -->
+    <h1 class="mt-6 text-5xl font-black tracking-tight sm:text-6xl text-white">
+      Photo Gallery
+    </h1>
+
+    <!-- Subtitle Description -->
+    <p class="mx-auto mt-6 max-w-xl text-lg font-medium leading-relaxed text-slate-300">
+      Explore our clinical excellence, advanced patient care facilities, and outstanding medical achievements.
+    </p>
+
+    <!-- Bottom Decorative Divider -->
+    <div class="mt-10 flex justify-center gap-1">
+      <div class="h-1 w-12 rounded-full bg-cyan-500"></div>
+      <div class="h-1 w-2 rounded-full bg-cyan-500/50"></div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- FILTERS -->
+  <section class="py-12">
+
+    <div class="container-shell">
+
+      <div
+        class="flex flex-wrap justify-center gap-3">
+
+        @for (item of categories; track item) {
+
+          <button
+            (click)="selectedCategory = item"
+            class="rounded-full px-6 py-3 font-bold transition"
+            [class.bg-medical-700]="selectedCategory === item"
+            [class.text-white]="selectedCategory === item"
+            [class.bg-white]="selectedCategory !== item">
+
+            {{ item }}
+
+          </button>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+  <section class="pb-24">
+
+    <div class="container-shell">
+
+      <div
+        class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+        @for (photo of filteredGallery; track photo.id) {
+
+         <article
+  class="group cursor-pointer overflow-hidden rounded-[2rem] bg-white shadow-xl"
+  (click)="openImage($index)"
+>
+
+  <div class="relative overflow-hidden">
+
+    <img
+      [src]="photo.image"
+      [alt]="photo.title"
+      class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-110"
+    />
+
+    <!-- Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100">
+
+      <div
+        class="absolute bottom-6 left-6">
+
+        <div
+          class="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur">
+
+          🔍
+
+        </div>
+
+        <h3
+          class="font-bold text-white">
+
+          View Photo
+
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+
+
+
+</section>
+     </main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <app-appointment [doctor]="content.doctor" />
+}
+
+
+@if (selectedImage) {
+
+<div
+  class="fixed inset-0 z-[99999] flex items-center justify-center bg-slate-950/95 backdrop-blur-xl"
+  (click)="closeImage()"
+>
+
+  <!-- Animated Background Glow -->
+  <div
+    class="absolute left-1/4 top-1/4 h-72 w-72 rounded-full bg-medical-500/20 blur-[120px]">
+  </div>
+
+  <div
+    class="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-cyan-500/20 blur-[120px]">
+  </div>
+
+  <!-- Counter -->
+  <div
+    class="absolute left-1/2 top-6 -translate-x-1/2 rounded-full border border-white/10 bg-white/10 px-5 py-2 backdrop-blur-xl">
+
+    <span class="text-sm font-bold text-white">
+      {{ selectedIndex + 1 }} / {{ filteredGallery.length }}
+    </span>
+
+  </div>
+
+  <!-- Close -->
+  <button
+    class="glass-btn absolute right-6 top-6"
+    (click)="closeImage(); $event.stopPropagation()">
+
+    ✕
+
+  </button>
+
+  <!-- Previous -->
+  <button
+    class="glass-btn absolute left-6 top-1/2 -translate-y-1/2"
+    (click)="previousImage(); $event.stopPropagation()">
+
+    ←
+
+  </button>
+
+  <!-- Next -->
+  <button
+    class="glass-btn absolute right-6 top-1/2 -translate-y-1/2"
+    (click)="nextImage(); $event.stopPropagation()">
+
+    →
+
+  </button>
+
+  <!-- Main Image -->
+  <div
+    class="animate-lightbox relative max-w-7xl px-20"
+    (click)="$event.stopPropagation()">
+
+    <img
+      [src]="selectedImage"
+      [alt]="selectedTitle"
+      class="max-h-[80vh] rounded-[2rem] shadow-[0_40px_120px_rgba(0,0,0,.6)]"
+    />
+
+    <div class="mt-5 text-center">
+
+      <h3
+        class="text-2xl font-black text-white">
+
+        {{ selectedTitle }}
+
+      </h3>
+
+    </div>
+
+  </div>
+
+  <!-- Thumbnail Strip -->
+  <div
+    class="absolute bottom-6 left-1/2 flex max-w-5xl -translate-x-1/2 gap-3 overflow-auto rounded-full border border-white/10 bg-white/5 p-3 backdrop-blur-xl">
+
+    @for (item of filteredGallery; track item.id; let i = $index) {
+
+      <img
+        [src]="item.image"
+        [alt]="item.title"
+        (click)="openImage(i)"
+        class="h-16 w-24 cursor-pointer rounded-xl object-cover transition duration-300"
+        [class.ring-4]="i === selectedIndex"
+        [class.ring-medical-400]="i === selectedIndex"
+      />
+
+    }
+
+  </div>
+
+</div>
+
+}

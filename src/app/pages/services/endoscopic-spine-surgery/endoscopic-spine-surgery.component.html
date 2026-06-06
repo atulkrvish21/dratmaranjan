@@ -38,7 +38,7 @@
       </div>
 
             <h1
-              class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">
+              class="text-4xl font-extrabold leading-tight text-ink sm:text-3xl lg:text-4xl">
 
               Endoscopic Spine Surgery
 
@@ -269,6 +269,124 @@
   </div>
 
 </section>
+
+<section class="relative overflow-hidden bg-slate-50 py-16 lg:py-24">
+
+  <!-- Background Effects -->
+  <div class="absolute left-0 top-0 h-96 w-96 rounded-full bg-medical-100 blur-3xl"></div>
+
+  <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-100 blur-3xl"></div>
+
+  <div class="container-shell relative z-10">
+
+    <!-- Header -->
+    <div class="mx-auto max-w-4xl text-center">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.35em] text-medical-700">
+
+        Minimally Invasive Spine Surgery
+
+      </p>
+
+      <h2
+        class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
+
+        Advantages of
+        <span class="text-medical-700">
+          Endoscopic Spine Surgery
+        </span>
+
+      </h2>
+
+      <p
+        class="mx-auto mt-6 max-w-3xl text-lg leading-9 text-slate-600">
+
+        Advanced endoscopic techniques help patients recover faster,
+        experience less pain and return to normal life sooner.
+
+      </p>
+
+    </div>
+
+    <!-- Benefits Grid -->
+    <div
+      class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+      @for (item of benefits; track item.title) {
+
+        <article
+          class="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_15px_50px_rgba(15,23,42,0.08)] transition duration-500 hover:-translate-y-3 hover:shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
+
+          <!-- Glow -->
+          <div
+            class="absolute right-0 top-0 h-32 w-32 rounded-full bg-medical-100 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100">
+          </div>
+
+          <!-- Icon -->
+          <div
+            class="relative z-10 inline-flex h-20 w-20 items-center justify-center rounded-[1.8rem] bg-gradient-to-br from-medical-700 to-emerald-500 text-4xl text-white shadow-xl transition duration-500 group-hover:scale-110">
+
+            {{ item.icon }}
+
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10">
+
+            <h3
+              class="mt-7 text-2xl font-black tracking-tight text-slate-900">
+
+              {{ item.title }}
+
+            </h3>
+
+            <p
+              class="mt-5 text-base leading-8 text-slate-600">
+
+              {{ item.description }}
+
+            </p>
+
+          </div>
+
+          <!-- Bottom Line -->
+          <div
+            class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-medical-700 to-emerald-500 transition-all duration-500 group-hover:w-full">
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+<div
+      class="relative mx-auto mt-14 hidden max-w-5xl lg:block">
+
+      <div
+        class="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-red-400 via-medical-500 to-emerald-500">
+      </div>
+
+      <div class="grid grid-cols-3">
+
+       @for (i of [0, 1, 2]; track i) {
+
+          <div class="flex justify-center">
+
+            <div
+              class="h-6 w-6 rounded-full border-4 border-white bg-medical-700 shadow-xl">
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
     <!-- CTA -->
     <section class="pb-16 lg:pb-24">
 
@@ -308,17 +426,6 @@
   <app-footer
     [links]="content.navLinks"
     [doctor]="content.doctor" />
-
-  <!-- WHATSAPP -->
-  <a
-    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:scale-110"
-    [href]="'https://wa.me/' + content.doctor.whatsapp"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp">
-
-    WA
-
-  </a>
+<app-appointment [doctor]="content.doctor" />
 
 }

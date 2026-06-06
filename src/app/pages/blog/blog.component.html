@@ -1,0 +1,191 @@
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+   
+    <section class="bg-white">
+
+<section class="bg-slate-50">
+
+  <!-- HERO -->
+<section class="relative overflow-hidden bg-slate-950 py-32 text-white">
+  <!-- Unsplash Background Image with Deep Overlay -->
+  <div class="absolute inset-0 z-0">
+   
+    <!-- Solid dark gradient to guarantee text contrast -->
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-slate-950/50"></div>
+  </div>
+
+  <!-- Decorative Light Glow -->
+  <div class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+  <!-- Content Container -->
+  <div class="container-shell relative z-10 mx-auto max-w-4xl px-4 text-center">
+    
+    <!-- Accent Badge -->
+    <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-800/80 px-4 py-1.5 text-sm font-semibold text-cyan-400 border border-slate-700/50 shadow-sm">
+      <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Blog & Insights
+    </span>
+
+    <!-- Main Title -->
+    <h1 class="mt-6 text-5xl font-black tracking-tight sm:text-6xl text-white">
+      Blog & Insights
+    </h1>
+
+    <!-- Subtitle Description -->
+    <p class="mx-auto mt-6 max-w-xl text-lg font-medium leading-relaxed text-slate-300">
+        Stay informed with the latest news, expert advice, and in-depth articles on neurosurgery and patient care.
+    </p>
+
+    <!-- Bottom Decorative Divider -->
+    <div class="mt-10 flex justify-center gap-1">
+      <div class="h-1 w-12 rounded-full bg-cyan-500"></div>
+      <div class="h-1 w-2 rounded-full bg-cyan-500/50"></div>
+    </div>
+
+  </div>
+</section>
+
+
+ 
+
+  <!-- FEATURED ARTICLE -->
+
+@if (posts$ | async; as posts) {
+  @if (posts.length > 0) {
+    
+    <!-- FEATURED HERO ARTICLE -->
+    <section class="py-16">
+      <div class="container-shell">
+        <article class="group overflow-hidden rounded-[2rem] bg-white shadow-2xl">
+          <div class="grid lg:grid-cols-2">
+            <div class="overflow-hidden">
+              <img
+                [src]="posts[0].image"
+                [alt]="posts[0].title"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-10 lg:p-14">
+              <span class="rounded-full bg-medical-50 px-4 py-2 text-sm font-bold text-medical-700">
+                Featured Article
+              </span>
+              <h2 class="mt-6 text-4xl font-black text-slate-900">
+                {{ posts[0].title }}
+              </h2>
+              <p class="mt-6 text-lg leading-8 text-slate-600">
+                {{ posts[0].excerpt }}
+              </p>
+              <div class="mt-6 flex gap-4 text-sm font-bold text-slate-500">
+                <span>{{ posts[0].date }}</span>
+                <span>•</span>
+                <span>{{ posts[0].readTime }}</span>
+              </div>
+              <a
+                [routerLink]="['/blog', posts[0].slug]"
+                class="mt-8 inline-flex rounded-2xl bg-medical-700 px-6 py-4 font-bold text-white hover:bg-medical-800 transition-colors">
+                Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BLOG GRID (Now nested correctly inside the async context) -->
+    <section class="pb-24">
+      <div class="container-shell">
+        <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          
+          <!-- FIX: Sliced the array from index 1 to hide the duplicated featured post -->
+          @for (post of posts.slice(1); track post.slug) {
+            <article class="group overflow-hidden rounded-[2rem] bg-white shadow-xl transition duration-300 hover:-translate-y-2">
+              <div class="overflow-hidden">
+                <img
+                  [src]="post.image"
+                  [alt]="post.title"
+                  class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div class="p-6">
+                <span class="rounded-full bg-medical-50 px-3 py-1 text-xs font-bold text-medical-700">
+                  {{ post.category }}
+                </span>
+                <h3 class="mt-4 line-clamp-2 text-2xl font-black text-slate-900 group-hover:text-medical-700 transition-colors">
+                  <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+                </h3>
+                <p class="mt-4 line-clamp-3 text-slate-600">
+                  {{ post.excerpt }}
+                </p>
+                <div class="mt-5 flex justify-between text-sm font-semibold text-slate-500">
+                  <span>{{ post.date }}</span>
+                  <span>{{ post.readTime }}</span>
+                </div>
+                <a
+                  [routerLink]="['/blog', post.slug]"
+                  class="mt-5 inline-flex font-bold text-medical-700 hover:text-medical-900 transition-colors">
+                  Read More →
+                </a>
+              </div>
+            </article>
+          }
+
+        </div>
+      </div>
+    </section>
+
+  } @else {
+    <!-- Empty Fallback State -->
+    <div class="py-24 text-center text-slate-500 font-medium">
+      No clinical articles found.
+    </div>
+  }
+}
+
+  <!-- CTA -->
+
+  <section class="pb-24">
+
+    <div class="container-shell">
+
+      <div
+        class="rounded-[2rem] bg-gradient-to-r from-medical-700 to-medical-900 p-10 text-center text-white">
+
+        <h2
+          class="text-3xl font-black">
+
+          Need Medical Advice?
+
+        </h2>
+
+        <p
+          class="mt-4 text-medical-100">
+
+          Book a consultation with Dr. Atmaranjan Dash.
+
+        </p>
+
+        <a
+          routerLink="/contact-us"
+          class="mt-6 inline-flex rounded-2xl bg-white px-8 py-4 font-bold text-medical-800">
+
+          Book Appointment
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+</section>
+
+
+
+     </main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <app-appointment [doctor]="content.doctor" />
+}
+

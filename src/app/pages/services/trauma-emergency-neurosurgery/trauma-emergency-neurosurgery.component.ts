@@ -2,7 +2,7 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ClinicContentService } from 'src/app/services/clinic-content.service';
-
+import { AppointmentComponent } from 'src/app/sections/appointment/appointment.component';
 import { FooterComponent } from 'src/app/sections/footer/footer.component';
 
 import { NavbarComponent } from 'src/app/sections/navbar/navbar.component';
@@ -14,6 +14,7 @@ import { ScrollRevealDirective } from 'src/app/shared/scroll-reveal/scroll-revea
     AsyncPipe,
     NavbarComponent,
     FooterComponent,
+    AppointmentComponent,
     ScrollRevealDirective
   ],
   templateUrl: './trauma-emergency-neurosurgery.component.html',

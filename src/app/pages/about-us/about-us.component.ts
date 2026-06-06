@@ -2,7 +2,7 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ClinicContentService } from '../../services/clinic-content.service';
-
+import { AppointmentComponent } from '../../sections/appointment/appointment.component';
 import { FooterComponent } from '../../sections/footer/footer.component';
 
 import { NavbarComponent } from '../../sections/navbar/navbar.component';
@@ -15,6 +15,7 @@ imports: [
     AsyncPipe,
     NavbarComponent,
     FooterComponent,
+    AppointmentComponent,
     ScrollRevealDirective
   ],
   templateUrl: './about-us.component.html',

@@ -89,6 +89,24 @@ export const routes: Routes = [
       import('./pages/contactus/contactus.component')
         .then((m) => m.ContactusComponent)
   },
+   {
+    path:'blog',
+    loadComponent: () =>
+      import('./pages/blog/blog.component')
+        .then((m) => m.BlogComponent)
+  },
+   {
+    path:'blog/:slug',
+    loadComponent: () =>
+      import('./pages/blog-detail/blog-detail.component')
+        .then((m) => m.BlogDetailComponent)
+  },
+  {
+    path:'neurosurgeon/:slug',
+    loadComponent: () =>
+      import('./seo/neurosurgeon/neurosurgeon.component')
+        .then((m) => m.NeurosurgeonComponent)
+  },
   {
     path: '**',
     redirectTo: ''

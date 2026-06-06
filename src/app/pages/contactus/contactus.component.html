@@ -1,1 +1,279 @@
-<p>contactus works!</p>
+@if (content$ | async; as content) {
+  <app-navbar [links]="content.navLinks" [doctor]="content.doctor" />
+  <main>
+   
+    <section class="bg-white">
+
+<section class="relative overflow-hidden bg-slate-50">
+
+  <!-- HERO -->
+
+  <section class="relative overflow-hidden bg-slate-950 py-32 text-white">
+  <!-- Unsplash Background Image with Deep Overlay -->
+  <div class="absolute inset-0 z-0">
+   
+    <!-- Solid dark gradient to guarantee text contrast -->
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-slate-950/50"></div>
+  </div>
+
+  <!-- Decorative Light Glow -->
+  <div class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+  <!-- Content Container -->
+  <div class="container-shell relative z-10 mx-auto max-w-4xl px-4 text-center">
+    
+    <!-- Accent Badge -->
+    <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-800/80 px-4 py-1.5 text-sm font-semibold text-cyan-400 border border-slate-700/50 shadow-sm">
+      <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      Dr. Atmaranjan Dash
+    </span>
+
+    <!-- Main Title -->
+    <h1 class="mt-6 text-5xl font-black tracking-tight sm:text-6xl text-white">
+      Contact Us
+    </h1>
+
+    <!-- Subtitle Description -->
+    <p class="mx-auto mt-6 max-w-xl text-lg font-medium leading-relaxed text-slate-300">
+        Get in touch with our team for any inquiries or to schedule a consultation.
+    </p>
+
+    <!-- Bottom Decorative Divider -->
+    <div class="mt-10 flex justify-center gap-1">
+      <div class="h-1 w-12 rounded-full bg-cyan-500"></div>
+      <div class="h-1 w-2 rounded-full bg-cyan-500/50"></div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- CONTACT SECTION -->
+
+  <section class="py-16 lg:py-24">
+
+    <div class="container-shell">
+
+      <div
+        class="grid gap-10 lg:grid-cols-[420px_1fr]">
+
+        <!-- LEFT -->
+
+        <div
+          class="rounded-[2rem] bg-gradient-to-br from-medical-900 to-medical-700 p-8 text-white shadow-2xl">
+
+          <h2
+            class="text-3xl font-black">
+
+            Contact Information
+
+          </h2>
+
+          <div class="mt-10 space-y-8">
+
+            <div class="flex gap-4">
+
+              <div
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/10">
+
+                📞
+
+              </div>
+
+              <div>
+
+                <p class="font-bold">
+                  Phone
+                </p>
+
+                <p class="text-medical-100">
+                  +91 9439971946
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="flex gap-4">
+
+              <div
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/10">
+
+                ✉️
+
+              </div>
+
+              <div>
+
+                <p class="font-bold">
+                  Email
+                </p>
+
+                <p class="text-medical-100">
+                  info&commat;dratmaranjandash.com
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="flex gap-4">
+
+              <div
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/10">
+
+                📍
+
+              </div>
+
+              <div>
+
+                <p class="font-bold">
+                  Location
+                </p>
+
+                <p class="text-medical-100">
+                   CARE Hospital, Bhubaneswar, Odisha
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="flex gap-4">
+
+              <div
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/10">
+
+                🕒
+
+              </div>
+
+              <div>
+
+                <p class="font-bold">
+                  Working Hours
+                </p>
+
+                <p class="text-medical-100">
+                  Mon - Sat : 9 AM - 8 PM
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <a
+            href="https://wa.me/919876543210"
+            target="_blank"
+            class="mt-10 flex items-center justify-center gap-3 rounded-2xl bg-green-500 px-6 py-4 font-bold text-white transition hover:scale-[1.02]">
+
+            WhatsApp Consultation
+
+          </a>
+
+        </div>
+
+        <!-- FORM -->
+
+        <div
+          class="rounded-[2rem] bg-white p-8 shadow-[0_20px_80px_rgba(15,23,42,.08)]">
+
+          <h2
+            class="text-3xl font-black text-slate-900">
+
+            Book Appointment
+
+          </h2>
+
+          <form
+            [formGroup]="form"
+            (ngSubmit)="submit()"
+            class="mt-8 grid gap-6">
+
+            <input
+              formControlName="name"
+              placeholder="Full Name"
+              class="rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-medical-500"
+            />
+
+            <input
+              formControlName="phone"
+              placeholder="Mobile Number"
+              class="rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-medical-500"
+            />
+
+            <input
+              formControlName="email"
+              placeholder="Email Address"
+              class="rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-medical-500"
+            />
+
+            <textarea
+              rows="5"
+              formControlName="message"
+              placeholder="Message"
+              class="rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-medical-500">
+            </textarea>
+
+            <button
+              type="submit"
+              class="rounded-2xl bg-medical-700 px-8 py-4 font-bold text-white transition hover:bg-medical-800">
+
+              Submit Appointment Request
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MAP -->
+
+  <section class="pb-24">
+
+    <div class="container-shell">
+
+      <div
+        class="overflow-hidden rounded-[2rem] shadow-2xl">
+
+       
+        <iframe  class="h-[500px] w-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d478909.9662166741!2d85.813092!3d20.32161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190922c49f83c5%3A0x3de76a4b8d53cdc0!2sDr.%20Atmaranjan%20Dash%20%3AMbbs%20%2CMs%20%2CMch%20Neurosurgery%20(%20AIIMS%20NEWDELHI)-%20Best%20Neurosurgeon%20in%20Odisha!5e0!3m2!1sen!2sus!4v1780593479215!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+
+      </div>
+<div class="mt-16 grid gap-6 md:grid-cols-3">
+
+  <div class="rounded-3xl bg-white p-8 shadow-xl">
+    ⭐ 5000+ Patients Treated
+  </div>
+
+  <div class="rounded-3xl bg-white p-8 shadow-xl">
+    🧠 Advanced Neurosurgery
+  </div>
+
+  <div class="rounded-3xl bg-white p-8 shadow-xl">
+    ⏱ Quick Appointment Response
+  </div>
+
+</div>
+    </div>
+
+  </section>
+
+</section>
+
+
+
+</section>
+     </main>
+  <app-footer   [links]="content.navLinks" [doctor]="content.doctor" />
+  <app-appointment [doctor]="content.doctor" />
+}
+

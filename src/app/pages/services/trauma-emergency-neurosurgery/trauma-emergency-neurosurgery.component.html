@@ -38,7 +38,7 @@
       </div>
 
             <h1
-              class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">
+              class="text-4xl font-extrabold leading-tight text-ink sm:text-3xl lg:text-4xl">
 
              Trauma & Emergency Neurosurgery
 
@@ -486,16 +486,5 @@
     [links]="content.navLinks"
     [doctor]="content.doctor" />
 
-  <!-- WHATSAPP -->
-  <a
-    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:scale-110"
-    [href]="'https://wa.me/' + content.doctor.whatsapp"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp">
-
-    WA
-
-  </a>
-
+ <app-appointment [doctor]="content.doctor" />
 }

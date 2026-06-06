@@ -57,6 +57,14 @@ section {
 
 
 
+@media (max-width: 768px) {
+  /* Force everything with the directive to be fully visible on mobile */
+  [appScrollReveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
 
 
 @media (prefers-reduced-motion: reduce) {

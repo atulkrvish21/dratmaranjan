@@ -38,7 +38,7 @@
       </div>
 
             <h1
-              class="text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-6xl">
+              class="text-4xl font-extrabold leading-tight text-ink sm:text-3xl lg:text-4xl">
 
               Minimally Invasive Spine Surgery
 
@@ -327,7 +327,30 @@
       }
 
     </div>
+<div
+      class="relative mx-auto mt-14 hidden max-w-5xl lg:block">
 
+      <div
+        class="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-red-400 via-medical-500 to-emerald-500">
+      </div>
+
+      <div class="grid grid-cols-3">
+
+       @for (i of [0, 1, 2]; track i) {
+
+          <div class="flex justify-center">
+
+            <div
+              class="h-6 w-6 rounded-full border-4 border-white bg-medical-700 shadow-xl">
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
   </div>
 
 </section>
@@ -371,16 +394,5 @@
     [links]="content.navLinks"
     [doctor]="content.doctor" />
 
-  <!-- WHATSAPP -->
-  <a
-    class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-xl font-black text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:scale-110"
-    [href]="'https://wa.me/' + content.doctor.whatsapp"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp">
-
-    WA
-
-  </a>
-
+<app-appointment [doctor]="content.doctor" />
 }

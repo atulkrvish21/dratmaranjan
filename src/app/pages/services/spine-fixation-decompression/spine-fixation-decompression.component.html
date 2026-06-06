@@ -1,1 +1,399 @@
-<p>spine-fixation-decompression works!</p>
+@if (content$ | async; as content) {
+
+  <app-navbar
+    [links]="content.navLinks"
+    [doctor]="content.doctor" />
+
+  <main class="overflow-hidden bg-white">
+
+    <!-- HERO -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-medical-950 via-medical-900 to-emerald-950 pt-28 pb-16 text-white lg:pt-36 lg:pb-24">
+
+      <!-- BACKGROUND -->
+      <div class="absolute inset-0 opacity-15">
+
+        <img
+          src="https://dratmaranjandash.com/wp-content/uploads/2026/03/66e75693-8e93-4522-881f-2b014c5b8d4c.webp"
+          class="h-full w-full object-cover object-center"
+        />
+
+      </div>
+
+      <!-- OVERLAY -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.25),transparent_35%)]">
+      </div>
+
+      <div class="container-shell relative z-10">
+
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+
+          <!-- LEFT -->
+          <div class="max-w-2xl">
+
+             <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-medical-100 bg-white px-4 py-2 text-sm font-bold text-medical-800 shadow-sm">
+        <span class="h-2.5 w-2.5 rounded-full bg-medical-500"></span>
+         Spinal Stabilization
+      </div>
+
+            <h1
+              class="text-4xl font-extrabold leading-tight text-ink sm:text-3xl lg:text-4xl">
+
+             Spine Fixation & Decompression Surgery
+
+            </h1>
+
+            <p
+              class="mt-5 max-w-2xl  leading-8 text-medical-900">
+
+                Expert surgical care for spinal instability and nerve compression using advanced fixation techniques and minimally invasive decompression.
+                
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+              <a
+                href="#appointment"
+                class="btn-primary">
+
+                Consult Dr. Dash
+
+              </a>
+
+              
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+          <div class="relative mx-auto w-full max-w-2xl">
+
+            <!-- GLOW -->
+            <div
+              class="absolute -inset-5 rounded-[3rem] bg-emerald-500/20 blur-3xl">
+            </div>
+
+            <!-- IMAGE -->
+            <div
+              class="relative overflow-hidden rounded-[2.5rem] border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+
+              <img
+                src="https://dratmaranjandash.com/wp-content/uploads/2026/03/66e75693-8e93-4522-881f-2b014c5b8d4c.webp"
+                class="aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+<section class="relative overflow-hidden bg-slate-50 py-16 lg:py-24">
+
+  <!-- Background Effects -->
+  <div class="absolute left-0 top-0 h-96 w-96 rounded-full bg-medical-100 blur-3xl"></div>
+
+  <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-100 blur-3xl"></div>
+
+  <div class="container-shell relative z-10">
+
+    <div class="grid gap-8 lg:grid-cols-2">
+
+      <!-- DECOMPRESSION -->
+      <article
+        class="group relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white/90 p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(15,23,42,0.12)] lg:p-10">
+
+        <div class="absolute right-0 top-0 h-40 w-40 rounded-full bg-medical-100 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
+
+        <div class="relative z-10 flex items-start gap-5">
+
+          <div
+            class="grid h-16 w-16 shrink-0 place-items-center rounded-[1.5rem] bg-gradient-to-br from-medical-700 to-emerald-500 text-3xl text-white shadow-xl">
+
+            🦴
+
+          </div>
+
+          <div>
+
+            <p
+              class="text-sm font-bold uppercase tracking-[0.3em] text-medical-700">
+
+              Spine Surgery
+
+            </p>
+
+            <h2
+              class="mt-2 text-3xl font-black leading-tight tracking-tight text-slate-900">
+
+              Decompression
+              Procedures
+
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="relative z-10 mt-10 grid gap-4">
+
+          @for (item of decompressionProcedures; track item) {
+
+            <div
+              class="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 transition duration-300 hover:border-medical-200 hover:bg-medical-50">
+
+              <div
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-medical-700 font-black text-white">
+
+                ✓
+
+              </div>
+
+              <p class="font-semibold text-slate-700">
+                {{ item }}
+              </p>
+
+            </div>
+
+          }
+
+        </div>
+
+      </article>
+
+      <!-- FIXATION -->
+      <article
+        class="group relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-medical-900 via-medical-800 to-emerald-900 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(15,23,42,0.2)] lg:p-10">
+
+        <div class="absolute left-0 top-0 h-40 w-40 rounded-full bg-emerald-400/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
+
+        <div class="relative z-10 flex items-start gap-5">
+
+          <div
+            class="grid h-16 w-16 shrink-0 place-items-center rounded-[1.5rem] bg-white/10 text-3xl shadow-xl backdrop-blur">
+
+            ⚙️
+
+          </div>
+
+          <div>
+
+            <p
+              class="text-sm font-bold uppercase tracking-[0.3em] text-emerald-300">
+
+              Stabilization Surgery
+
+            </p>
+
+            <h2
+              class="mt-2 text-3xl font-black leading-tight tracking-tight">
+
+              Fixation
+              Techniques
+
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="relative z-10 mt-10 grid gap-4">
+
+          @for (item of fixationTechniques; track item) {
+
+            <div
+              class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur transition duration-300 hover:bg-white/15">
+
+              <div
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-emerald-400 font-black text-black">
+
+                ★
+
+              </div>
+
+              <p class="font-semibold text-white">
+                {{ item }}
+              </p>
+
+            </div>
+
+          }
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="relative overflow-hidden bg-white py-16 lg:py-24">
+
+  <!-- Background Glow -->
+  <div class="absolute left-0 top-0 h-96 w-96 rounded-full bg-medical-100 blur-3xl"></div>
+
+  <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-100 blur-3xl"></div>
+
+  <div class="container-shell relative z-10">
+
+    <!-- Heading -->
+    <div class="mx-auto max-w-4xl text-center">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.35em] text-medical-700">
+
+        Spine Stabilization
+
+      </p>
+
+      <h2
+        class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
+
+        When Is
+        <span class="text-medical-700">
+          Spine Fixation Needed?
+        </span>
+
+      </h2>
+
+      <p
+        class="mx-auto mt-6 max-w-3xl text-lg leading-9 text-slate-600">
+
+        Spine fixation is recommended when instability threatens spinal
+        alignment, nerve function, or long-term mobility.
+
+      </p>
+
+    </div>
+
+    <!-- Cards -->
+    <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+      @for (item of indications; track item.title) {
+
+        <article
+          class="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_15px_50px_rgba(15,23,42,0.08)] transition duration-500 hover:-translate-y-3 hover:shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
+
+          <!-- Glow -->
+          <div
+            class="absolute right-0 top-0 h-32 w-32 rounded-full bg-medical-100 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100">
+          </div>
+
+          <!-- Icon -->
+          <div
+            class="relative z-10 inline-flex h-20 w-20 items-center justify-center rounded-[1.8rem] bg-gradient-to-br from-medical-700 to-emerald-500 text-4xl text-white shadow-xl transition duration-500 group-hover:scale-110">
+
+            {{ item.icon }}
+
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10">
+
+            <h3
+              class="mt-7 text-2xl font-black tracking-tight text-slate-900">
+
+              {{ item.title }}
+
+            </h3>
+
+            <p
+              class="mt-5 text-base leading-8 text-slate-600">
+
+              {{ item.description }}
+
+            </p>
+
+          </div>
+
+          <!-- Bottom Border -->
+          <div
+            class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-medical-700 to-emerald-500 transition-all duration-500 group-hover:w-full">
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+<div
+      class="relative mx-auto mt-14 hidden max-w-5xl lg:block">
+
+      <div
+        class="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-red-400 via-medical-500 to-emerald-500">
+      </div>
+
+      <div class="grid grid-cols-3">
+
+        @for (item of protocols; track item.title) {
+
+          <div class="flex justify-center">
+
+            <div
+              class="h-6 w-6 rounded-full border-4 border-white bg-medical-700 shadow-xl">
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+    <!-- CTA -->
+    <section class="pb-16 lg:pb-24">
+
+      <div class="container-shell">
+
+        <div
+          class="overflow-hidden rounded-[3rem] bg-gradient-to-r from-medical-700 to-emerald-600 px-8 py-14 text-center text-white shadow-2xl sm:px-12">
+
+          <h2 class="text-3xl font-black sm:text-4xl">
+            Need Expert Advice?
+          </h2>
+
+          <p
+            class="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+
+            Book a consultation with Dr. Atmaranjan Dash for expert brain tumor evaluation and treatment planning.
+
+          </p>
+
+          <a
+            href="https://wa.me/919439971946"
+            target="_blank"
+            class="mt-10 inline-flex rounded-full bg-white px-8 py-4 font-black text-medical-900 transition duration-300 hover:scale-105">
+
+            Book Appointment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <app-footer
+    [links]="content.navLinks"
+    [doctor]="content.doctor" />
+
+<app-appointment [doctor]="content.doctor" />
+
+}
