@@ -108,6 +108,12 @@ export const routes: Routes = [
         .then((m) => m.NeurosurgeonComponent)
   },
   {
+    path:':services/:city',
+    loadComponent: () =>
+      import('./seo/location-page/location-page.component')
+        .then((m) => m.LocationPageComponent)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

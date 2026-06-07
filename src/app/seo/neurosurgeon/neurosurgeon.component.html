@@ -9,7 +9,13 @@
         </p>
         <div class="hero-cta">
             <a class="btn primary" href="tel:+91-94399-71946" aria-label="Call clinic">Call: +91 94399 71946</a>
-            <a class="btn outline" href="#contact" aria-label="Request appointment">Request Appointment</a>
+           
+             <button 
+    type="button" 
+    (click)="triggerGlobalPopup($event)" 
+    class="btn outline">
+    Request Appointment
+  </button>
         </div>
         <ul class="credentials" aria-hidden="false">
             <li>Board-certified neurosurgeon</li>

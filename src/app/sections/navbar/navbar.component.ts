@@ -27,7 +27,7 @@ constructor(
   }
 // Local controller wrapper method
   triggerGlobalPopup(event: Event): void {
-    console.log('➡️ Navbar Button Component physically clicked!');
+    
     event.preventDefault();
     event.stopPropagation();
     this.modalService.open();
